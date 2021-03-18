@@ -1,0 +1,341 @@
+ve 
+vete 
+vaya 
+váyase 
+corre !
+corran !
+corra !
+quién ?
+fuego !
+incendio !
+disparen !
+ayuda !
+socorro ! auxilio !
+salta !
+Salte !
+para !
+espera !
+esperen 
+continúa 
+continúe 
+date prisa !
+dese prisa 
+me escondí
+me escondía 
+corrí
+corría
+lo intentó
+he ganado !
+oh no !
+tómatelo con soda 
+sonríe
+al ataque !
+levanta 
+ve ahora mismo 
+vaya ahora mismo 
+vayan ahora mismo 
+ve ya 
+vaya ya 
+vayan ya 
+lo tengo !
+entendiste ?
+el corrió 
+metete adentro 
+abrazame 
+me preocupo 
+me caí
+me escapé
+me escapaba 
+yo lo sé
+salí
+mentí
+perdí
+renuncié
+lo dejo 
+canté
+lloré
+lloraba 
+estoy trabajando 
+tengo diecinueve 
+estoy levantado 
+escucha 
+escuché
+escuchen 
+ no puede ser !
+de ninguna manera 
+imposible !
+de ningún modo !
+de eso nada !
+ni cagando !
+en serio ?
+la verdad ?
+gracias !
+pruébalo 
+lo procuramos 
+ganamos 
+por que yo ?
+preguntale a tom 
+preguntale 
+orale !
+mantente en calma 
+estate tranquilo 
+se justo 
+se bueno 
+sean buenos 
+sea bueno 
+llámame 
+llamanos 
+entre 
+pase 
+entren !
+andale 
+sueltalo 
+agarra a tom 
+bajate 
+salte 
+sal 
+salgan 
+vete de aquí !
+largate !
+salga de aquí !
+largo !
+vete ya !
+a la calle !
+vete a casa 
+vaya despacio 
+hasta luego !
+hasta la vista 
+espera un momento !
+agarra fuertemente 
+el vino 
+el renuncio 
+ayudame 
+ayudanos 
+hola tom !
+golpea a tom 
+sostenlo 
+resiste 
+abraza a tom 
+estoy de acuerdo 
+de acuerdo 
+me incliné
+disparé
+me congelé
+me quede quieto 
+me he mudado 
+dormí
+lo intente 
+iré
+soy tom 
+estoy gordo 
+soy gorda 
+soy viejo 
+soy tímido 
+estoy mojada 
+esta bien 
+soy yo 
+únete a nosotros 
+se parte nuestra 
+guardalo 
+pasa desapercibido
+echa el candado 
+yo también 
+abre 
+perfecto !
+empújala 
+nos vemos 
+muéstramelo 
+cierra la boca !
+cerra el pico !
+despierta !
+lavate las manos 
+nos preocupamos 
+lo sabemos 
+perdimos 
+bienvenidos 
+quien comió ?
+quien corría ?
+quien corrió ?
+quien gano ?
+quien ha ganado ?
+por que no ?
+has ganado 
+se un hombre 
+se fuerte 
+se breve 
+estate quieto 
+no te muevas 
+llamalo a tomas !
+no te vayas 
+arregla esto 
+pasenla bien 
+el hablo 
+el lo intenta 
+ayuda a tom 
+que tan profundo ?
+como de profundo ?
+hazme el favor 
+hable mas fuerte !
+de pie !
+ellos ganaron 
+iremos 
+estamos bien 
+para que ?
+que divertido !
+quien soy yo ?
+quien vino ?
+quien murió ?
+quien se callo ?
+quien se cayo ?
+quien perdió ?
+quien pago ?
+quien se ha ido ?
+quien lo ha dejado ?
+quien nado ?
+quien es el ?
+ha perdido usted 
+perdieron ustedes 
+han perdido ustedes 
+despues de ti 
+tu primero 
+después de usted 
+respondeme 
+se sincero 
+los pájaros vuelan 
+llama a casa !
+calmate 
+tranquilizate 
+baja un cambio 
+podemos ir ?
+podemos irnos ?
+capturalo 
+capturenlo 
+vuelve 
+ven 
+ven a casa 
+venga aquí
+vuelve pronto 
+yo gane ?
+gane ?
+hazlo ahora 
+los perros ladran 
+no preguntes 
+no llores 
+no te mueras !
+no corras 
+fantástico !
+dejalo 
+olvídame 
+olvidenme 
+entra 
+vete a la cama 
+toma algo 
+el es viejo 
+el se afeito 
+sonrió
+el es veloz 
+el es bueno 
+el es rico 
+aca estoy 
+sosten esto 
+estoy lleno 
+soy bueno 
+estoy enferma 
+te lo ruego 
+puedo correr 
+se correr 
+sentí verguenza 
+exhale 
+perdí la consciencia 
+te entiendo 
+me dieron 
+me alcanzaron 
+sonreí
+lo odio 
+voy a trabajar 
+soy un hombre 
+estoy solo 
+estoy enojado 
+estoy despierto 
+soy ciega 
+estoy sin dinero 
+estoy loco 
+estoy borracho 
+me estoy muriendo 
+soy el primero 
+me toca primero 
+yo voy primero 
+soy feliz 
+estoy listo 
+yo estoy cansado 
+no hagas caso 
+es grave ?
+es malo ?
+esta lejos ?
+eres tu ?
+se quemo 
+no lo consiguió
+falló
+es un televisor 
+hace frio 
+esta frio 
+esta fresco 
+hace buen tiempo 
+vale 
+es nuestro 
+se termino 
+ha llegado el momento
+es la hora 
+ha llegado la hora 
+es verdad !
+es mi trabajo 
+guardalos 
+quédatelos 
+guarda esto 
+guarden esto 
+mantente caliente
+mantente abrigado 
+mantenganse calientes 
+mantenganse abrigados 
+ahora marchate 
+dejame entrar 
+dejanos entrar 
+comamos 
+veamos 
+intentémoslo !
+mantente quieto en el suelo 
+mira para otro lado 
+miren para otro lado 
+mira hacia atrás !
+mira aquí
+hazte a un lado 
+por favor vete 
+lee esto 
+ella lo intento 
+ella camina 
+firma esto 
+siéntate y no te muevas 
+siéntate y quedate quieto 
+sentate ahí
+quieto 
+mas despacio 
+quedate acá
+para aqui 
+mantente delgado 
+da un paso atrás
+parate aquí
+gracias a ti 
+gracias 
+ese soy yo 
+entonces que ?
+se fueron 
+se iban 
+perdieron 
+intentalo de nuevo 
+abre el candado 
+espera aquí
+podemos ir 
+podemos irnos 
+nos podemos marchar 
+nosotros esperamos 
+después veremos 
