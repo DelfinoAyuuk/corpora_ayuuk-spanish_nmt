@@ -1,0 +1,509 @@
+2021-03-18 17:41:53,150 - INFO - root - Hello! This is Joey-NMT (version 1.0).
+2021-03-18 17:41:53,208 - INFO - joeynmt.data - loading training data...
+2021-03-18 17:41:53,470 - INFO - joeynmt.data - building vocabulary...
+2021-03-18 17:41:53,641 - INFO - joeynmt.data - loading dev data...
+2021-03-18 17:41:53,664 - INFO - joeynmt.data - loading test data...
+2021-03-18 17:41:53,681 - INFO - joeynmt.data - data loaded.
+2021-03-18 17:41:54,336 - DEBUG - h5py._conv - Creating converter from 7 to 5
+2021-03-18 17:41:54,336 - DEBUG - h5py._conv - Creating converter from 5 to 7
+2021-03-18 17:41:54,336 - DEBUG - h5py._conv - Creating converter from 7 to 5
+2021-03-18 17:41:54,336 - DEBUG - h5py._conv - Creating converter from 5 to 7
+2021-03-18 17:41:55,092 - INFO - joeynmt.training - Total params: 510976
+2021-03-18 17:41:55,093 - DEBUG - joeynmt.training - Trainable parameters: ['decoder.layer_norm.bias', 'decoder.layer_norm.weight', 'decoder.layers.0.dec_layer_norm.bias', 'decoder.layers.0.dec_layer_norm.weight', 'decoder.layers.0.feed_forward.layer_norm.bias', 'decoder.layers.0.feed_forward.layer_norm.weight', 'decoder.layers.0.feed_forward.pwff_layer.0.bias', 'decoder.layers.0.feed_forward.pwff_layer.0.weight', 'decoder.layers.0.feed_forward.pwff_layer.3.bias', 'decoder.layers.0.feed_forward.pwff_layer.3.weight', 'decoder.layers.0.src_trg_att.k_layer.bias', 'decoder.layers.0.src_trg_att.k_layer.weight', 'decoder.layers.0.src_trg_att.output_layer.bias', 'decoder.layers.0.src_trg_att.output_layer.weight', 'decoder.layers.0.src_trg_att.q_layer.bias', 'decoder.layers.0.src_trg_att.q_layer.weight', 'decoder.layers.0.src_trg_att.v_layer.bias', 'decoder.layers.0.src_trg_att.v_layer.weight', 'decoder.layers.0.trg_trg_att.k_layer.bias', 'decoder.layers.0.trg_trg_att.k_layer.weight', 'decoder.layers.0.trg_trg_att.output_layer.bias', 'decoder.layers.0.trg_trg_att.output_layer.weight', 'decoder.layers.0.trg_trg_att.q_layer.bias', 'decoder.layers.0.trg_trg_att.q_layer.weight', 'decoder.layers.0.trg_trg_att.v_layer.bias', 'decoder.layers.0.trg_trg_att.v_layer.weight', 'decoder.layers.0.x_layer_norm.bias', 'decoder.layers.0.x_layer_norm.weight', 'decoder.layers.1.dec_layer_norm.bias', 'decoder.layers.1.dec_layer_norm.weight', 'decoder.layers.1.feed_forward.layer_norm.bias', 'decoder.layers.1.feed_forward.layer_norm.weight', 'decoder.layers.1.feed_forward.pwff_layer.0.bias', 'decoder.layers.1.feed_forward.pwff_layer.0.weight', 'decoder.layers.1.feed_forward.pwff_layer.3.bias', 'decoder.layers.1.feed_forward.pwff_layer.3.weight', 'decoder.layers.1.src_trg_att.k_layer.bias', 'decoder.layers.1.src_trg_att.k_layer.weight', 'decoder.layers.1.src_trg_att.output_layer.bias', 'decoder.layers.1.src_trg_att.output_layer.weight', 'decoder.layers.1.src_trg_att.q_layer.bias', 'decoder.layers.1.src_trg_att.q_layer.weight', 'decoder.layers.1.src_trg_att.v_layer.bias', 'decoder.layers.1.src_trg_att.v_layer.weight', 'decoder.layers.1.trg_trg_att.k_layer.bias', 'decoder.layers.1.trg_trg_att.k_layer.weight', 'decoder.layers.1.trg_trg_att.output_layer.bias', 'decoder.layers.1.trg_trg_att.output_layer.weight', 'decoder.layers.1.trg_trg_att.q_layer.bias', 'decoder.layers.1.trg_trg_att.q_layer.weight', 'decoder.layers.1.trg_trg_att.v_layer.bias', 'decoder.layers.1.trg_trg_att.v_layer.weight', 'decoder.layers.1.x_layer_norm.bias', 'decoder.layers.1.x_layer_norm.weight', 'decoder.layers.2.dec_layer_norm.bias', 'decoder.layers.2.dec_layer_norm.weight', 'decoder.layers.2.feed_forward.layer_norm.bias', 'decoder.layers.2.feed_forward.layer_norm.weight', 'decoder.layers.2.feed_forward.pwff_layer.0.bias', 'decoder.layers.2.feed_forward.pwff_layer.0.weight', 'decoder.layers.2.feed_forward.pwff_layer.3.bias', 'decoder.layers.2.feed_forward.pwff_layer.3.weight', 'decoder.layers.2.src_trg_att.k_layer.bias', 'decoder.layers.2.src_trg_att.k_layer.weight', 'decoder.layers.2.src_trg_att.output_layer.bias', 'decoder.layers.2.src_trg_att.output_layer.weight', 'decoder.layers.2.src_trg_att.q_layer.bias', 'decoder.layers.2.src_trg_att.q_layer.weight', 'decoder.layers.2.src_trg_att.v_layer.bias', 'decoder.layers.2.src_trg_att.v_layer.weight', 'decoder.layers.2.trg_trg_att.k_layer.bias', 'decoder.layers.2.trg_trg_att.k_layer.weight', 'decoder.layers.2.trg_trg_att.output_layer.bias', 'decoder.layers.2.trg_trg_att.output_layer.weight', 'decoder.layers.2.trg_trg_att.q_layer.bias', 'decoder.layers.2.trg_trg_att.q_layer.weight', 'decoder.layers.2.trg_trg_att.v_layer.bias', 'decoder.layers.2.trg_trg_att.v_layer.weight', 'decoder.layers.2.x_layer_norm.bias', 'decoder.layers.2.x_layer_norm.weight', 'encoder.layer_norm.bias', 'encoder.layer_norm.weight', 'encoder.layers.0.feed_forward.layer_norm.bias', 'encoder.layers.0.feed_forward.layer_norm.weight', 'encoder.layers.0.feed_forward.pwff_layer.0.bias', 'encoder.layers.0.feed_forward.pwff_layer.0.weight', 'encoder.layers.0.feed_forward.pwff_layer.3.bias', 'encoder.layers.0.feed_forward.pwff_layer.3.weight', 'encoder.layers.0.layer_norm.bias', 'encoder.layers.0.layer_norm.weight', 'encoder.layers.0.src_src_att.k_layer.bias', 'encoder.layers.0.src_src_att.k_layer.weight', 'encoder.layers.0.src_src_att.output_layer.bias', 'encoder.layers.0.src_src_att.output_layer.weight', 'encoder.layers.0.src_src_att.q_layer.bias', 'encoder.layers.0.src_src_att.q_layer.weight', 'encoder.layers.0.src_src_att.v_layer.bias', 'encoder.layers.0.src_src_att.v_layer.weight', 'encoder.layers.1.feed_forward.layer_norm.bias', 'encoder.layers.1.feed_forward.layer_norm.weight', 'encoder.layers.1.feed_forward.pwff_layer.0.bias', 'encoder.layers.1.feed_forward.pwff_layer.0.weight', 'encoder.layers.1.feed_forward.pwff_layer.3.bias', 'encoder.layers.1.feed_forward.pwff_layer.3.weight', 'encoder.layers.1.layer_norm.bias', 'encoder.layers.1.layer_norm.weight', 'encoder.layers.1.src_src_att.k_layer.bias', 'encoder.layers.1.src_src_att.k_layer.weight', 'encoder.layers.1.src_src_att.output_layer.bias', 'encoder.layers.1.src_src_att.output_layer.weight', 'encoder.layers.1.src_src_att.q_layer.bias', 'encoder.layers.1.src_src_att.q_layer.weight', 'encoder.layers.1.src_src_att.v_layer.bias', 'encoder.layers.1.src_src_att.v_layer.weight', 'encoder.layers.2.feed_forward.layer_norm.bias', 'encoder.layers.2.feed_forward.layer_norm.weight', 'encoder.layers.2.feed_forward.pwff_layer.0.bias', 'encoder.layers.2.feed_forward.pwff_layer.0.weight', 'encoder.layers.2.feed_forward.pwff_layer.3.bias', 'encoder.layers.2.feed_forward.pwff_layer.3.weight', 'encoder.layers.2.layer_norm.bias', 'encoder.layers.2.layer_norm.weight', 'encoder.layers.2.src_src_att.k_layer.bias', 'encoder.layers.2.src_src_att.k_layer.weight', 'encoder.layers.2.src_src_att.output_layer.bias', 'encoder.layers.2.src_src_att.output_layer.weight', 'encoder.layers.2.src_src_att.q_layer.bias', 'encoder.layers.2.src_src_att.q_layer.weight', 'encoder.layers.2.src_src_att.v_layer.bias', 'encoder.layers.2.src_src_att.v_layer.weight', 'src_embed.lut.weight']
+2021-03-18 17:41:55,095 - INFO - joeynmt.helpers - cfg.name                           : mir.esmir_transformer
+2021-03-18 17:41:55,095 - INFO - joeynmt.helpers - cfg.data.src                       : es
+2021-03-18 17:41:55,095 - INFO - joeynmt.helpers - cfg.data.trg                       : mir
+2021-03-18 17:41:55,095 - INFO - joeynmt.helpers - cfg.data.train                     : /data/joeynmt/mir.esmir/train.bpe
+2021-03-18 17:41:55,095 - INFO - joeynmt.helpers - cfg.data.dev                       : /data/joeynmt/mir.esmir/dev.bpe
+2021-03-18 17:41:55,095 - INFO - joeynmt.helpers - cfg.data.test                      : /data/joeynmt/mir.esmir/test.bpe
+2021-03-18 17:41:55,095 - INFO - joeynmt.helpers - cfg.data.level                     : bpe
+2021-03-18 17:41:55,095 - INFO - joeynmt.helpers - cfg.data.lowercase                 : True
+2021-03-18 17:41:55,095 - INFO - joeynmt.helpers - cfg.data.max_sent_length           : 50
+2021-03-18 17:41:55,095 - INFO - joeynmt.helpers - cfg.data.src_vocab                 : /data/joeynmt/mir.esmir/vocab.txt
+2021-03-18 17:41:55,095 - INFO - joeynmt.helpers - cfg.data.trg_vocab                 : /data/joeynmt/mir.esmir/vocab.txt
+2021-03-18 17:41:55,095 - INFO - joeynmt.helpers - cfg.testing.beam_size              : 3
+2021-03-18 17:41:55,095 - INFO - joeynmt.helpers - cfg.testing.alpha                  : 1.0
+2021-03-18 17:41:55,095 - INFO - joeynmt.helpers - cfg.testing.postprocess            : True
+2021-03-18 17:41:55,095 - INFO - joeynmt.helpers - cfg.testing.bpe_type               : subword-nmt
+2021-03-18 17:41:55,096 - INFO - joeynmt.helpers - cfg.testing.sacrebleu.remove_whitespace : True
+2021-03-18 17:41:55,096 - INFO - joeynmt.helpers - cfg.testing.sacrebleu.tokenize     : 13a
+2021-03-18 17:41:55,096 - INFO - joeynmt.helpers - cfg.training.random_seed           : 42
+2021-03-18 17:41:55,096 - INFO - joeynmt.helpers - cfg.training.optimizer             : adam
+2021-03-18 17:41:55,096 - INFO - joeynmt.helpers - cfg.training.normalization         : tokens
+2021-03-18 17:41:55,096 - INFO - joeynmt.helpers - cfg.training.adam_betas            : [0.9, 0.999]
+2021-03-18 17:41:55,096 - INFO - joeynmt.helpers - cfg.training.scheduling            : plateau
+2021-03-18 17:41:55,096 - INFO - joeynmt.helpers - cfg.training.patience              : 5
+2021-03-18 17:41:55,096 - INFO - joeynmt.helpers - cfg.training.learning_rate_factor  : 0.5
+2021-03-18 17:41:55,096 - INFO - joeynmt.helpers - cfg.training.learning_rate_warmup  : 800
+2021-03-18 17:41:55,096 - INFO - joeynmt.helpers - cfg.training.decrease_factor       : 0.7
+2021-03-18 17:41:55,096 - INFO - joeynmt.helpers - cfg.training.loss                  : crossentropy
+2021-03-18 17:41:55,096 - INFO - joeynmt.helpers - cfg.training.learning_rate         : 0.0003
+2021-03-18 17:41:55,096 - INFO - joeynmt.helpers - cfg.training.learning_rate_min     : 1e-08
+2021-03-18 17:41:55,096 - INFO - joeynmt.helpers - cfg.training.weight_decay          : 0.0
+2021-03-18 17:41:55,096 - INFO - joeynmt.helpers - cfg.training.label_smoothing       : 0.1
+2021-03-18 17:41:55,096 - INFO - joeynmt.helpers - cfg.training.batch_size            : 128
+2021-03-18 17:41:55,096 - INFO - joeynmt.helpers - cfg.training.batch_type            : sentence
+2021-03-18 17:41:55,096 - INFO - joeynmt.helpers - cfg.training.eval_batch_size       : 256
+2021-03-18 17:41:55,096 - INFO - joeynmt.helpers - cfg.training.eval_batch_type       : sentence
+2021-03-18 17:41:55,096 - INFO - joeynmt.helpers - cfg.training.batch_multiplier      : 1
+2021-03-18 17:41:55,097 - INFO - joeynmt.helpers - cfg.training.early_stopping_metric : ppl
+2021-03-18 17:41:55,097 - INFO - joeynmt.helpers - cfg.training.epochs                : 100
+2021-03-18 17:41:55,097 - INFO - joeynmt.helpers - cfg.training.validation_freq       : 500
+2021-03-18 17:41:55,097 - INFO - joeynmt.helpers - cfg.training.logging_freq          : 1000
+2021-03-18 17:41:55,097 - INFO - joeynmt.helpers - cfg.training.eval_metric           : bleu
+2021-03-18 17:41:55,097 - INFO - joeynmt.helpers - cfg.training.model_dir             : models/sin-random6
+2021-03-18 17:41:55,097 - INFO - joeynmt.helpers - cfg.training.overwrite             : False
+2021-03-18 17:41:55,097 - INFO - joeynmt.helpers - cfg.training.shuffle               : True
+2021-03-18 17:41:55,097 - INFO - joeynmt.helpers - cfg.training.use_cuda              : True
+2021-03-18 17:41:55,097 - INFO - joeynmt.helpers - cfg.training.max_output_length     : 50
+2021-03-18 17:41:55,097 - INFO - joeynmt.helpers - cfg.training.print_valid_sents     : [0, 1, 2, 3]
+2021-03-18 17:41:55,097 - INFO - joeynmt.helpers - cfg.training.keep_last_ckpts       : 3
+2021-03-18 17:41:55,097 - INFO - joeynmt.helpers - cfg.model.initializer              : xavier
+2021-03-18 17:41:55,097 - INFO - joeynmt.helpers - cfg.model.bias_initializer         : zeros
+2021-03-18 17:41:55,097 - INFO - joeynmt.helpers - cfg.model.init_gain                : 1.0
+2021-03-18 17:41:55,097 - INFO - joeynmt.helpers - cfg.model.embed_initializer        : xavier
+2021-03-18 17:41:55,097 - INFO - joeynmt.helpers - cfg.model.embed_init_gain          : 1.0
+2021-03-18 17:41:55,097 - INFO - joeynmt.helpers - cfg.model.tied_embeddings          : True
+2021-03-18 17:41:55,097 - INFO - joeynmt.helpers - cfg.model.tied_softmax             : True
+2021-03-18 17:41:55,097 - INFO - joeynmt.helpers - cfg.model.encoder.type             : transformer
+2021-03-18 17:41:55,097 - INFO - joeynmt.helpers - cfg.model.encoder.num_layers       : 3
+2021-03-18 17:41:55,098 - INFO - joeynmt.helpers - cfg.model.encoder.num_heads        : 4
+2021-03-18 17:41:55,098 - INFO - joeynmt.helpers - cfg.model.encoder.embeddings.embedding_dim : 64
+2021-03-18 17:41:55,098 - INFO - joeynmt.helpers - cfg.model.encoder.embeddings.scale : True
+2021-03-18 17:41:55,098 - INFO - joeynmt.helpers - cfg.model.encoder.embeddings.dropout : 0.2
+2021-03-18 17:41:55,098 - INFO - joeynmt.helpers - cfg.model.encoder.hidden_size      : 64
+2021-03-18 17:41:55,098 - INFO - joeynmt.helpers - cfg.model.encoder.ff_size          : 128
+2021-03-18 17:41:55,098 - INFO - joeynmt.helpers - cfg.model.encoder.dropout          : 0.3
+2021-03-18 17:41:55,098 - INFO - joeynmt.helpers - cfg.model.decoder.type             : transformer
+2021-03-18 17:41:55,098 - INFO - joeynmt.helpers - cfg.model.decoder.num_layers       : 3
+2021-03-18 17:41:55,098 - INFO - joeynmt.helpers - cfg.model.decoder.num_heads        : 4
+2021-03-18 17:41:55,098 - INFO - joeynmt.helpers - cfg.model.decoder.embeddings.embedding_dim : 64
+2021-03-18 17:41:55,098 - INFO - joeynmt.helpers - cfg.model.decoder.embeddings.scale : True
+2021-03-18 17:41:55,098 - INFO - joeynmt.helpers - cfg.model.decoder.embeddings.dropout : 0.2
+2021-03-18 17:41:55,098 - INFO - joeynmt.helpers - cfg.model.decoder.hidden_size      : 64
+2021-03-18 17:41:55,098 - INFO - joeynmt.helpers - cfg.model.decoder.ff_size          : 128
+2021-03-18 17:41:55,098 - INFO - joeynmt.helpers - cfg.model.decoder.dropout          : 0.3
+2021-03-18 17:41:55,098 - INFO - joeynmt.helpers - Data set sizes: 
+	train 4664,
+	valid 700,
+	test 912
+2021-03-18 17:41:55,098 - INFO - joeynmt.helpers - First training example:
+	[SRC] las leyes de los estados in@@ tro@@ du@@ ci@@ rán el principio de la represent@@ ación proporcion@@ al en la elección de los a@@ y@@ unt@@ a@@ mientos de todos los municipi@@ os
+	[TRG] ja estad@@ os@@ ë lye@@ y ajxy, pyëda'ag@@ a'a@@ mb@@ y ajxy je'e nej nyë'ëg@@ ën@@ ëgu'u@@ duj@@ tën ku ajxy wyinge@@ xy ma ja jëyëjpë mëj kuduunk kopk'ajpë ajxy jim tëg'aambë ajxy ënajty wyinge@@ xyën, mëdu'untyë tëg'aambë ajxy
+2021-03-18 17:41:55,098 - INFO - joeynmt.helpers - First 10 words (src): (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ja (5) ajxy (6) a (7) de (8) y (9) la
+2021-03-18 17:41:55,098 - INFO - joeynmt.helpers - First 10 words (trg): (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ja (5) ajxy (6) a (7) de (8) y (9) la
+2021-03-18 17:41:55,098 - INFO - joeynmt.helpers - Number of Src words (types): 4056
+2021-03-18 17:41:55,098 - INFO - joeynmt.helpers - Number of Trg words (types): 4056
+2021-03-18 17:41:55,099 - INFO - joeynmt.training - Model(
+	encoder=TransformerEncoder(num_layers=3, num_heads=4),
+	decoder=TransformerDecoder(num_layers=3, num_heads=4),
+	src_embed=Embeddings(embedding_dim=64, vocab_size=4056),
+	trg_embed=Embeddings(embedding_dim=64, vocab_size=4056))
+2021-03-18 17:41:55,102 - INFO - joeynmt.training - Train stats:
+	device: cpu
+	n_gpu: 0
+	16-bits training: False
+	gradient accumulation: 1
+	batch size per device: 128
+	total batch size (w. parallel & accumulation): 128
+2021-03-18 17:41:55,102 - INFO - joeynmt.training - EPOCH 1
+2021-03-18 17:42:10,577 - INFO - joeynmt.training - Epoch   1: total training loss 255.10
+2021-03-18 17:42:10,577 - INFO - joeynmt.training - EPOCH 2
+2021-03-18 17:42:27,941 - INFO - joeynmt.training - Epoch   2: total training loss 237.38
+2021-03-18 17:42:27,942 - INFO - joeynmt.training - EPOCH 3
+2021-03-18 17:42:44,824 - INFO - joeynmt.training - Epoch   3: total training loss 225.17
+2021-03-18 17:42:44,825 - INFO - joeynmt.training - EPOCH 4
+2021-03-18 17:43:01,916 - INFO - joeynmt.training - Epoch   4: total training loss 218.08
+2021-03-18 17:43:01,917 - INFO - joeynmt.training - EPOCH 5
+2021-03-18 17:43:18,377 - INFO - joeynmt.training - Epoch   5: total training loss 214.38
+2021-03-18 17:43:18,377 - INFO - joeynmt.training - EPOCH 6
+2021-03-18 17:43:34,696 - INFO - joeynmt.training - Epoch   6: total training loss 212.73
+2021-03-18 17:43:34,696 - INFO - joeynmt.training - EPOCH 7
+2021-03-18 17:43:50,992 - INFO - joeynmt.training - Epoch   7: total training loss 211.88
+2021-03-18 17:43:50,993 - INFO - joeynmt.training - EPOCH 8
+2021-03-18 17:44:06,909 - INFO - joeynmt.training - Epoch   8: total training loss 211.33
+2021-03-18 17:44:06,909 - INFO - joeynmt.training - EPOCH 9
+2021-03-18 17:44:22,861 - INFO - joeynmt.training - Epoch   9: total training loss 210.72
+2021-03-18 17:44:22,862 - INFO - joeynmt.training - EPOCH 10
+2021-03-18 17:44:38,060 - INFO - joeynmt.training - Epoch  10: total training loss 209.97
+2021-03-18 17:44:38,060 - INFO - joeynmt.training - EPOCH 11
+2021-03-18 17:44:53,605 - INFO - joeynmt.training - Epoch  11: total training loss 209.07
+2021-03-18 17:44:53,606 - INFO - joeynmt.training - EPOCH 12
+2021-03-18 17:45:08,956 - INFO - joeynmt.training - Epoch  12: total training loss 207.84
+2021-03-18 17:45:08,956 - INFO - joeynmt.training - EPOCH 13
+2021-03-18 17:45:24,737 - INFO - joeynmt.training - Epoch  13: total training loss 206.55
+2021-03-18 17:45:24,737 - INFO - joeynmt.training - EPOCH 14
+2021-03-18 17:45:42,957 - INFO - joeynmt.training - Hooray! New best validation result [ppl]!
+2021-03-18 17:45:42,958 - INFO - joeynmt.training - Saving new checkpoint.
+2021-03-18 17:45:42,979 - INFO - joeynmt.training - Example #0
+2021-03-18 17:45:42,980 - DEBUG - joeynmt.training - 	Raw source:     ['porque', 'éste', 'es', 'de', 'quien', 'está', 'escrito', 'he', 'aquí,', 'yo', 'en@@', 'ví@@', 'o', 'mi', 'men@@', 's@@', 'aj@@', 'ero', 'delante', 'de', 'tu', 'fa@@', 'z,', 'el', 'cual', 'prepar@@', 'ará', 'tu', 'camino', 'delante', 'de', 'ti']
+2021-03-18 17:45:42,980 - DEBUG - joeynmt.training - 	Raw hypothesis: ['ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja']
+2021-03-18 17:45:42,980 - INFO - joeynmt.training - 	Source:     porque éste es de quien está escrito he aquí, yo envío mi mensajero delante de tu faz, el cual preparará tu camino delante de ti
+2021-03-18 17:45:42,980 - INFO - joeynmt.training - 	Reference:  ix juan jëduꞌun nënëëmë ma jëduꞌun kyujaayën ukꞌix ajxy, tsyamëtsyë ngugapxy ngejxëꞌëky, jeꞌejë mnëë mduꞌu xyꞌaꞌixëdyaꞌaganëp
+2021-03-18 17:45:42,980 - INFO - joeynmt.training - 	Hypothesis: ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja
+2021-03-18 17:45:42,980 - INFO - joeynmt.training - Example #1
+2021-03-18 17:45:42,980 - DEBUG - joeynmt.training - 	Raw source:     ['otra', 'vez', 'os', 'digo,', 'que', 'es', 'más', 'f@@', 'á@@', 'ci@@', 'l', 'pas@@', 'ar', 'un', 'ca@@', 'me@@', 'l@@', 'lo', 'por', 'el', 'o@@', 'jo', 'de', 'una', 'agu@@', 'ja@@', ',', 'que', 'entrar', 'un', 'r@@', 'ico', 'en', 'el', 'reino', 'de', 'dios']
+2021-03-18 17:45:42,980 - DEBUG - joeynmt.training - 	Raw hypothesis: ['ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja']
+2021-03-18 17:45:42,980 - INFO - joeynmt.training - 	Source:     otra vez os digo, que es más fácil pasar un camello por el ojo de una aguja, que entrar un rico en el reino de dios
+2021-03-18 17:45:42,980 - INFO - joeynmt.training - 	Reference:  janë jëduꞌun duꞌumbë, maas pakyë camello jiipy tuꞌuk nyaxëꞌëwët xuꞌunty jut jooty kejee ku mayëë jëyaꞌay tuꞌuk tyëgëꞌëwët ma dios ja yꞌaneꞌemdaaktën
+2021-03-18 17:45:42,980 - INFO - joeynmt.training - 	Hypothesis: ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja
+2021-03-18 17:45:42,980 - INFO - joeynmt.training - Example #2
+2021-03-18 17:45:42,980 - DEBUG - joeynmt.training - 	Raw source:     ['los', 'jue@@', 'ces', 'de', 'cada', 'estado', 'se', 'ar@@', 'regl@@', 'arán', 'a', 'dich@@', 'a', 'constitu@@', 'ción,', 'leyes', 'y', 'tra@@', 't@@', 'ados,', 'a', 'pes@@', 'ar', 'de', 'las', 'disposiciones', 'en', 'contr@@', 'ario', 'que', 'pued@@', 'a', 'haber', 'en', 'las', 'constitu@@', 'ciones', 'o', 'leyes', 'de', 'los', 'estados']
+2021-03-18 17:45:42,980 - DEBUG - joeynmt.training - 	Raw hypothesis: ['ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja']
+2021-03-18 17:45:42,980 - INFO - joeynmt.training - 	Source:     los jueces de cada estado se arreglarán a dicha constitución, leyes y tratados, a pesar de las disposiciones en contrario que pueda haber en las constituciones o leyes de los estados
+2021-03-18 17:45:42,980 - INFO - joeynmt.training - 	Reference:  ja ajxy mëj ane'embë'ajpë ma jaty ja estados ja ane'emt kujaay kugeetsypë ajxy nyë'ëgë kudyunaampy, ja leyes mët ja ajxy të yajtëdyëgë'eyëbë, oy ja estados y'amdso ane'emt kujaay kugeetsypë o ja lyeyes ajxy ënajty tëgatsy jyanëjts'ane'emë'ëy
+2021-03-18 17:45:42,980 - INFO - joeynmt.training - 	Hypothesis: ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja
+2021-03-18 17:45:42,980 - INFO - joeynmt.training - Example #3
+2021-03-18 17:45:42,980 - DEBUG - joeynmt.training - 	Raw source:     ['qued@@', 'a', 'pro@@', 'h@@', 'ib@@', 'ido', 'en', 'todo', 'c@@', 'entro', 'de', 'trabaj@@', 'o,', 'el', 'estableci@@', 'miento', 'de', 'ex@@', 'pen@@', 'dios', 'de', 'beb@@', 'idas', 'emb@@', 'ri@@', 'ag@@', 'antes', 'y', 'de', 'cas@@', 'as', 'de', 'ju@@', 'ego', 'de', 'az@@', 'ar']
+2021-03-18 17:45:42,980 - DEBUG - joeynmt.training - 	Raw hypothesis: ['ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja', 'ja']
+2021-03-18 17:45:42,980 - INFO - joeynmt.training - 	Source:     queda prohibido en todo centro de trabajo, el establecimiento de expendios de bebidas embriagantes y de casas de juego de azar
+2021-03-18 17:45:42,980 - INFO - joeynmt.training - 	Reference:  kabë ku'udujt ku joknëë ajxy jim tyoogët ma jaty ja tuundaakt ni ku ja tëjk ajxy pyëda'agët ma ajxy suertë y'ëyë'ëgyën
+2021-03-18 17:45:42,980 - INFO - joeynmt.training - 	Hypothesis: ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja ja
+2021-03-18 17:45:42,980 - INFO - joeynmt.training - Validation result (greedy) at epoch  14, step      500: bleu:   0.01, loss: 130448.8750, ppl: 304.8857, duration: 10.7564s
+2021-03-18 17:45:50,908 - INFO - joeynmt.training - Epoch  14: total training loss 205.34
+2021-03-18 17:45:50,908 - INFO - joeynmt.training - EPOCH 15
+2021-03-18 17:46:06,650 - INFO - joeynmt.training - Epoch  15: total training loss 203.99
+2021-03-18 17:46:06,650 - INFO - joeynmt.training - EPOCH 16
+2021-03-18 17:46:22,202 - INFO - joeynmt.training - Epoch  16: total training loss 202.62
+2021-03-18 17:46:22,202 - INFO - joeynmt.training - EPOCH 17
+2021-03-18 17:46:37,751 - INFO - joeynmt.training - Epoch  17: total training loss 201.15
+2021-03-18 17:46:37,751 - INFO - joeynmt.training - EPOCH 18
+2021-03-18 17:46:53,372 - INFO - joeynmt.training - Epoch  18: total training loss 199.40
+2021-03-18 17:46:53,372 - INFO - joeynmt.training - EPOCH 19
+2021-03-18 17:47:09,695 - INFO - joeynmt.training - Epoch  19: total training loss 197.48
+2021-03-18 17:47:09,695 - INFO - joeynmt.training - EPOCH 20
+2021-03-18 17:47:25,483 - INFO - joeynmt.training - Epoch  20: total training loss 195.49
+2021-03-18 17:47:25,483 - INFO - joeynmt.training - EPOCH 21
+2021-03-18 17:47:41,220 - INFO - joeynmt.training - Epoch  21: total training loss 193.66
+2021-03-18 17:47:41,220 - INFO - joeynmt.training - EPOCH 22
+2021-03-18 17:47:57,022 - INFO - joeynmt.training - Epoch  22: total training loss 192.05
+2021-03-18 17:47:57,022 - INFO - joeynmt.training - EPOCH 23
+2021-03-18 17:48:12,508 - INFO - joeynmt.training - Epoch  23: total training loss 190.66
+2021-03-18 17:48:12,508 - INFO - joeynmt.training - EPOCH 24
+2021-03-18 17:48:28,387 - INFO - joeynmt.training - Epoch  24: total training loss 189.49
+2021-03-18 17:48:28,387 - INFO - joeynmt.training - EPOCH 25
+2021-03-18 17:48:44,232 - INFO - joeynmt.training - Epoch  25: total training loss 188.25
+2021-03-18 17:48:44,232 - INFO - joeynmt.training - EPOCH 26
+2021-03-18 17:48:59,914 - INFO - joeynmt.training - Epoch  26: total training loss 187.10
+2021-03-18 17:48:59,914 - INFO - joeynmt.training - EPOCH 27
+2021-03-18 17:49:15,684 - INFO - joeynmt.training - Epoch  27: total training loss 185.99
+2021-03-18 17:49:15,685 - INFO - joeynmt.training - EPOCH 28
+2021-03-18 17:49:15,941 - INFO - joeynmt.training - Epoch  28, Step:     1000, Batch Loss:     5.226344, Tokens per Sec:     8924, Lr: 0.000300
+2021-03-18 17:49:26,591 - INFO - joeynmt.training - Hooray! New best validation result [ppl]!
+2021-03-18 17:49:26,591 - INFO - joeynmt.training - Saving new checkpoint.
+2021-03-18 17:49:26,616 - INFO - joeynmt.training - Example #0
+2021-03-18 17:49:26,616 - DEBUG - joeynmt.training - 	Raw source:     ['porque', 'éste', 'es', 'de', 'quien', 'está', 'escrito', 'he', 'aquí,', 'yo', 'en@@', 'ví@@', 'o', 'mi', 'men@@', 's@@', 'aj@@', 'ero', 'delante', 'de', 'tu', 'fa@@', 'z,', 'el', 'cual', 'prepar@@', 'ará', 'tu', 'camino', 'delante', 'de', 'ti']
+2021-03-18 17:49:26,616 - DEBUG - joeynmt.training - 	Raw hypothesis: ['a', 'ja', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy']
+2021-03-18 17:49:26,616 - INFO - joeynmt.training - 	Source:     porque éste es de quien está escrito he aquí, yo envío mi mensajero delante de tu faz, el cual preparará tu camino delante de ti
+2021-03-18 17:49:26,617 - INFO - joeynmt.training - 	Reference:  ix juan jëduꞌun nënëëmë ma jëduꞌun kyujaayën ukꞌix ajxy, tsyamëtsyë ngugapxy ngejxëꞌëky, jeꞌejë mnëë mduꞌu xyꞌaꞌixëdyaꞌaganëp
+2021-03-18 17:49:26,617 - INFO - joeynmt.training - 	Hypothesis: a ja ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy
+2021-03-18 17:49:26,617 - INFO - joeynmt.training - Example #1
+2021-03-18 17:49:26,617 - DEBUG - joeynmt.training - 	Raw source:     ['otra', 'vez', 'os', 'digo,', 'que', 'es', 'más', 'f@@', 'á@@', 'ci@@', 'l', 'pas@@', 'ar', 'un', 'ca@@', 'me@@', 'l@@', 'lo', 'por', 'el', 'o@@', 'jo', 'de', 'una', 'agu@@', 'ja@@', ',', 'que', 'entrar', 'un', 'r@@', 'ico', 'en', 'el', 'reino', 'de', 'dios']
+2021-03-18 17:49:26,617 - DEBUG - joeynmt.training - 	Raw hypothesis: ['a', 'ja', 'ja', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy']
+2021-03-18 17:49:26,617 - INFO - joeynmt.training - 	Source:     otra vez os digo, que es más fácil pasar un camello por el ojo de una aguja, que entrar un rico en el reino de dios
+2021-03-18 17:49:26,617 - INFO - joeynmt.training - 	Reference:  janë jëduꞌun duꞌumbë, maas pakyë camello jiipy tuꞌuk nyaxëꞌëwët xuꞌunty jut jooty kejee ku mayëë jëyaꞌay tuꞌuk tyëgëꞌëwët ma dios ja yꞌaneꞌemdaaktën
+2021-03-18 17:49:26,617 - INFO - joeynmt.training - 	Hypothesis: a ja ja ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy
+2021-03-18 17:49:26,617 - INFO - joeynmt.training - Example #2
+2021-03-18 17:49:26,617 - DEBUG - joeynmt.training - 	Raw source:     ['los', 'jue@@', 'ces', 'de', 'cada', 'estado', 'se', 'ar@@', 'regl@@', 'arán', 'a', 'dich@@', 'a', 'constitu@@', 'ción,', 'leyes', 'y', 'tra@@', 't@@', 'ados,', 'a', 'pes@@', 'ar', 'de', 'las', 'disposiciones', 'en', 'contr@@', 'ario', 'que', 'pued@@', 'a', 'haber', 'en', 'las', 'constitu@@', 'ciones', 'o', 'leyes', 'de', 'los', 'estados']
+2021-03-18 17:49:26,617 - DEBUG - joeynmt.training - 	Raw hypothesis: ['ja', 'ja', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy']
+2021-03-18 17:49:26,617 - INFO - joeynmt.training - 	Source:     los jueces de cada estado se arreglarán a dicha constitución, leyes y tratados, a pesar de las disposiciones en contrario que pueda haber en las constituciones o leyes de los estados
+2021-03-18 17:49:26,617 - INFO - joeynmt.training - 	Reference:  ja ajxy mëj ane'embë'ajpë ma jaty ja estados ja ane'emt kujaay kugeetsypë ajxy nyë'ëgë kudyunaampy, ja leyes mët ja ajxy të yajtëdyëgë'eyëbë, oy ja estados y'amdso ane'emt kujaay kugeetsypë o ja lyeyes ajxy ënajty tëgatsy jyanëjts'ane'emë'ëy
+2021-03-18 17:49:26,617 - INFO - joeynmt.training - 	Hypothesis: ja ja ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy
+2021-03-18 17:49:26,617 - INFO - joeynmt.training - Example #3
+2021-03-18 17:49:26,617 - DEBUG - joeynmt.training - 	Raw source:     ['qued@@', 'a', 'pro@@', 'h@@', 'ib@@', 'ido', 'en', 'todo', 'c@@', 'entro', 'de', 'trabaj@@', 'o,', 'el', 'estableci@@', 'miento', 'de', 'ex@@', 'pen@@', 'dios', 'de', 'beb@@', 'idas', 'emb@@', 'ri@@', 'ag@@', 'antes', 'y', 'de', 'cas@@', 'as', 'de', 'ju@@', 'ego', 'de', 'az@@', 'ar']
+2021-03-18 17:49:26,617 - DEBUG - joeynmt.training - 	Raw hypothesis: ['ja', 'ja', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy']
+2021-03-18 17:49:26,617 - INFO - joeynmt.training - 	Source:     queda prohibido en todo centro de trabajo, el establecimiento de expendios de bebidas embriagantes y de casas de juego de azar
+2021-03-18 17:49:26,617 - INFO - joeynmt.training - 	Reference:  kabë ku'udujt ku joknëë ajxy jim tyoogët ma jaty ja tuundaakt ni ku ja tëjk ajxy pyëda'agët ma ajxy suertë y'ëyë'ëgyën
+2021-03-18 17:49:26,617 - INFO - joeynmt.training - 	Hypothesis: ja ja ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy
+2021-03-18 17:49:26,617 - INFO - joeynmt.training - Validation result (greedy) at epoch  28, step     1000: bleu:   0.04, loss: 118511.4844, ppl: 180.6397, duration: 10.6755s
+2021-03-18 17:49:42,131 - INFO - joeynmt.training - Epoch  28: total training loss 184.95
+2021-03-18 17:49:42,131 - INFO - joeynmt.training - EPOCH 29
+2021-03-18 17:49:57,832 - INFO - joeynmt.training - Epoch  29: total training loss 183.63
+2021-03-18 17:49:57,832 - INFO - joeynmt.training - EPOCH 30
+2021-03-18 17:50:14,039 - INFO - joeynmt.training - Epoch  30: total training loss 182.54
+2021-03-18 17:50:14,039 - INFO - joeynmt.training - EPOCH 31
+2021-03-18 17:50:29,719 - INFO - joeynmt.training - Epoch  31: total training loss 181.45
+2021-03-18 17:50:29,719 - INFO - joeynmt.training - EPOCH 32
+2021-03-18 17:50:45,271 - INFO - joeynmt.training - Epoch  32: total training loss 180.51
+2021-03-18 17:50:45,271 - INFO - joeynmt.training - EPOCH 33
+2021-03-18 17:51:00,977 - INFO - joeynmt.training - Epoch  33: total training loss 179.54
+2021-03-18 17:51:00,977 - INFO - joeynmt.training - EPOCH 34
+2021-03-18 17:51:16,255 - INFO - joeynmt.training - Epoch  34: total training loss 178.70
+2021-03-18 17:51:16,255 - INFO - joeynmt.training - EPOCH 35
+2021-03-18 17:51:31,869 - INFO - joeynmt.training - Epoch  35: total training loss 177.86
+2021-03-18 17:51:31,869 - INFO - joeynmt.training - EPOCH 36
+2021-03-18 17:51:47,298 - INFO - joeynmt.training - Epoch  36: total training loss 177.13
+2021-03-18 17:51:47,298 - INFO - joeynmt.training - EPOCH 37
+2021-03-18 17:52:03,402 - INFO - joeynmt.training - Epoch  37: total training loss 176.24
+2021-03-18 17:52:03,402 - INFO - joeynmt.training - EPOCH 38
+2021-03-18 17:52:18,994 - INFO - joeynmt.training - Epoch  38: total training loss 175.59
+2021-03-18 17:52:18,995 - INFO - joeynmt.training - EPOCH 39
+2021-03-18 17:52:34,364 - INFO - joeynmt.training - Epoch  39: total training loss 174.88
+2021-03-18 17:52:34,365 - INFO - joeynmt.training - EPOCH 40
+2021-03-18 17:52:50,269 - INFO - joeynmt.training - Epoch  40: total training loss 174.16
+2021-03-18 17:52:50,269 - INFO - joeynmt.training - EPOCH 41
+2021-03-18 17:53:09,190 - INFO - joeynmt.training - Hooray! New best validation result [ppl]!
+2021-03-18 17:53:09,190 - INFO - joeynmt.training - Saving new checkpoint.
+2021-03-18 17:53:09,212 - INFO - joeynmt.training - Example #0
+2021-03-18 17:53:09,212 - DEBUG - joeynmt.training - 	Raw source:     ['porque', 'éste', 'es', 'de', 'quien', 'está', 'escrito', 'he', 'aquí,', 'yo', 'en@@', 'ví@@', 'o', 'mi', 'men@@', 's@@', 'aj@@', 'ero', 'delante', 'de', 'tu', 'fa@@', 'z,', 'el', 'cual', 'prepar@@', 'ará', 'tu', 'camino', 'delante', 'de', 'ti']
+2021-03-18 17:53:09,212 - DEBUG - joeynmt.training - 	Raw hypothesis: ['a', 'a', 'nëmë', 'jesus', 'jesus', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ënajty', 'ënajty', 'ënajty', 'ënajty', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të']
+2021-03-18 17:53:09,212 - INFO - joeynmt.training - 	Source:     porque éste es de quien está escrito he aquí, yo envío mi mensajero delante de tu faz, el cual preparará tu camino delante de ti
+2021-03-18 17:53:09,213 - INFO - joeynmt.training - 	Reference:  ix juan jëduꞌun nënëëmë ma jëduꞌun kyujaayën ukꞌix ajxy, tsyamëtsyë ngugapxy ngejxëꞌëky, jeꞌejë mnëë mduꞌu xyꞌaꞌixëdyaꞌaganëp
+2021-03-18 17:53:09,213 - INFO - joeynmt.training - 	Hypothesis: a a nëmë jesus jesus ajxy ajxy ajxy ajxy ajxy ënajty ënajty ënajty ënajty të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të
+2021-03-18 17:53:09,213 - INFO - joeynmt.training - Example #1
+2021-03-18 17:53:09,213 - DEBUG - joeynmt.training - 	Raw source:     ['otra', 'vez', 'os', 'digo,', 'que', 'es', 'más', 'f@@', 'á@@', 'ci@@', 'l', 'pas@@', 'ar', 'un', 'ca@@', 'me@@', 'l@@', 'lo', 'por', 'el', 'o@@', 'jo', 'de', 'una', 'agu@@', 'ja@@', ',', 'que', 'entrar', 'un', 'r@@', 'ico', 'en', 'el', 'reino', 'de', 'dios']
+2021-03-18 17:53:09,213 - DEBUG - joeynmt.training - 	Raw hypothesis: ['a', 'a', 'ja', 'jesus', 'ja', 'yaꞌay', 'ajxy', 'ënajty', 'ënajty', 'ënajty', 'ënajty', 'ënajty', 'ënajty', 'ënajty', 'ënajty', 'ënajty', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të']
+2021-03-18 17:53:09,213 - INFO - joeynmt.training - 	Source:     otra vez os digo, que es más fácil pasar un camello por el ojo de una aguja, que entrar un rico en el reino de dios
+2021-03-18 17:53:09,213 - INFO - joeynmt.training - 	Reference:  janë jëduꞌun duꞌumbë, maas pakyë camello jiipy tuꞌuk nyaxëꞌëwët xuꞌunty jut jooty kejee ku mayëë jëyaꞌay tuꞌuk tyëgëꞌëwët ma dios ja yꞌaneꞌemdaaktën
+2021-03-18 17:53:09,213 - INFO - joeynmt.training - 	Hypothesis: a a ja jesus ja yaꞌay ajxy ënajty ënajty ënajty ënajty ënajty ënajty ënajty ënajty ënajty të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të
+2021-03-18 17:53:09,213 - INFO - joeynmt.training - Example #2
+2021-03-18 17:53:09,213 - DEBUG - joeynmt.training - 	Raw source:     ['los', 'jue@@', 'ces', 'de', 'cada', 'estado', 'se', 'ar@@', 'regl@@', 'arán', 'a', 'dich@@', 'a', 'constitu@@', 'ción,', 'leyes', 'y', 'tra@@', 't@@', 'ados,', 'a', 'pes@@', 'ar', 'de', 'las', 'disposiciones', 'en', 'contr@@', 'ario', 'que', 'pued@@', 'a', 'haber', 'en', 'las', 'constitu@@', 'ciones', 'o', 'leyes', 'de', 'los', 'estados']
+2021-03-18 17:53:09,213 - DEBUG - joeynmt.training - 	Raw hypothesis: ['ja', 'ja', 'ley', 'ley', 'ley', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'naax', 'naax', 'naax', 'naax', 'naax', 'naax', 'naax', 'naax', 'naax', 'naax', 'naax', 'naax', 'naax', 'naax', 'naax', 'naax', 'naax', 'naax', 'naax', 'naax', 'naax', 'naax', 'naax']
+2021-03-18 17:53:09,213 - INFO - joeynmt.training - 	Source:     los jueces de cada estado se arreglarán a dicha constitución, leyes y tratados, a pesar de las disposiciones en contrario que pueda haber en las constituciones o leyes de los estados
+2021-03-18 17:53:09,213 - INFO - joeynmt.training - 	Reference:  ja ajxy mëj ane'embë'ajpë ma jaty ja estados ja ane'emt kujaay kugeetsypë ajxy nyë'ëgë kudyunaampy, ja leyes mët ja ajxy të yajtëdyëgë'eyëbë, oy ja estados y'amdso ane'emt kujaay kugeetsypë o ja lyeyes ajxy ënajty tëgatsy jyanëjts'ane'emë'ëy
+2021-03-18 17:53:09,213 - INFO - joeynmt.training - 	Hypothesis: ja ja ley ley ley ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy ajxy naax naax naax naax naax naax naax naax naax naax naax naax naax naax naax naax naax naax naax naax naax naax naax
+2021-03-18 17:53:09,213 - INFO - joeynmt.training - Example #3
+2021-03-18 17:53:09,213 - DEBUG - joeynmt.training - 	Raw source:     ['qued@@', 'a', 'pro@@', 'h@@', 'ib@@', 'ido', 'en', 'todo', 'c@@', 'entro', 'de', 'trabaj@@', 'o,', 'el', 'estableci@@', 'miento', 'de', 'ex@@', 'pen@@', 'dios', 'de', 'beb@@', 'idas', 'emb@@', 'ri@@', 'ag@@', 'antes', 'y', 'de', 'cas@@', 'as', 'de', 'ju@@', 'ego', 'de', 'az@@', 'ar']
+2021-03-18 17:53:09,213 - DEBUG - joeynmt.training - 	Raw hypothesis: ['ja', 'ja', 'ley', 'ley', 'ley', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'ajxy', 'naax', 'naax', 'naax', 'naax', 'naax', 'naax', 'naax', 'naax', 'naax', 'naax', 'naax', 'naax', 'naax', 'naax', 'naax', 'naax', 'naax', 'naax', 'naax', 'naax', 'naax', 'naax', 'naax', 'naax', 'naax', 'naax', 'naax', 'naax', 'naax', 'naax', 'naax', 'naax', 'naax', 'naax', 'naax', 'naax', 'naax', 'naax']
+2021-03-18 17:53:09,213 - INFO - joeynmt.training - 	Source:     queda prohibido en todo centro de trabajo, el establecimiento de expendios de bebidas embriagantes y de casas de juego de azar
+2021-03-18 17:53:09,213 - INFO - joeynmt.training - 	Reference:  kabë ku'udujt ku joknëë ajxy jim tyoogët ma jaty ja tuundaakt ni ku ja tëjk ajxy pyëda'agët ma ajxy suertë y'ëyë'ëgyën
+2021-03-18 17:53:09,213 - INFO - joeynmt.training - 	Hypothesis: ja ja ley ley ley ajxy ajxy ajxy ajxy ajxy ajxy ajxy naax naax naax naax naax naax naax naax naax naax naax naax naax naax naax naax naax naax naax naax naax naax naax naax naax naax naax naax naax naax naax naax naax naax naax naax naax naax
+2021-03-18 17:53:09,213 - INFO - joeynmt.training - Validation result (greedy) at epoch  41, step     1500: bleu:   0.15, loss: 112367.3516, ppl: 137.9782, duration: 10.7828s
+2021-03-18 17:53:16,441 - INFO - joeynmt.training - Epoch  41: total training loss 173.53
+2021-03-18 17:53:16,441 - INFO - joeynmt.training - EPOCH 42
+2021-03-18 17:53:32,003 - INFO - joeynmt.training - Epoch  42: total training loss 172.92
+2021-03-18 17:53:32,003 - INFO - joeynmt.training - EPOCH 43
+2021-03-18 17:53:47,698 - INFO - joeynmt.training - Epoch  43: total training loss 172.26
+2021-03-18 17:53:47,698 - INFO - joeynmt.training - EPOCH 44
+2021-03-18 17:54:03,036 - INFO - joeynmt.training - Epoch  44: total training loss 171.59
+2021-03-18 17:54:03,037 - INFO - joeynmt.training - EPOCH 45
+2021-03-18 17:54:18,771 - INFO - joeynmt.training - Epoch  45: total training loss 171.07
+2021-03-18 17:54:18,771 - INFO - joeynmt.training - EPOCH 46
+2021-03-18 17:54:35,064 - INFO - joeynmt.training - Epoch  46: total training loss 170.50
+2021-03-18 17:54:35,065 - INFO - joeynmt.training - EPOCH 47
+2021-03-18 17:54:50,595 - INFO - joeynmt.training - Epoch  47: total training loss 169.96
+2021-03-18 17:54:50,595 - INFO - joeynmt.training - EPOCH 48
+2021-03-18 17:55:06,289 - INFO - joeynmt.training - Epoch  48: total training loss 169.29
+2021-03-18 17:55:06,289 - INFO - joeynmt.training - EPOCH 49
+2021-03-18 17:55:21,998 - INFO - joeynmt.training - Epoch  49: total training loss 168.75
+2021-03-18 17:55:21,998 - INFO - joeynmt.training - EPOCH 50
+2021-03-18 17:55:37,410 - INFO - joeynmt.training - Epoch  50: total training loss 168.28
+2021-03-18 17:55:37,410 - INFO - joeynmt.training - EPOCH 51
+2021-03-18 17:55:53,160 - INFO - joeynmt.training - Epoch  51: total training loss 167.66
+2021-03-18 17:55:53,161 - INFO - joeynmt.training - EPOCH 52
+2021-03-18 17:56:08,966 - INFO - joeynmt.training - Epoch  52: total training loss 167.29
+2021-03-18 17:56:08,967 - INFO - joeynmt.training - EPOCH 53
+2021-03-18 17:56:25,069 - INFO - joeynmt.training - Epoch  53: total training loss 166.51
+2021-03-18 17:56:25,070 - INFO - joeynmt.training - EPOCH 54
+2021-03-18 17:56:40,577 - INFO - joeynmt.training - Epoch  54: total training loss 166.10
+2021-03-18 17:56:40,578 - INFO - joeynmt.training - EPOCH 55
+2021-03-18 17:56:41,579 - INFO - joeynmt.training - Epoch  55, Step:     2000, Batch Loss:     3.419617, Tokens per Sec:     5908, Lr: 0.000300
+2021-03-18 17:56:52,263 - INFO - joeynmt.training - Hooray! New best validation result [ppl]!
+2021-03-18 17:56:52,263 - INFO - joeynmt.training - Saving new checkpoint.
+2021-03-18 17:56:52,288 - INFO - joeynmt.training - Example #0
+2021-03-18 17:56:52,288 - DEBUG - joeynmt.training - 	Raw source:     ['porque', 'éste', 'es', 'de', 'quien', 'está', 'escrito', 'he', 'aquí,', 'yo', 'en@@', 'ví@@', 'o', 'mi', 'men@@', 's@@', 'aj@@', 'ero', 'delante', 'de', 'tu', 'fa@@', 'z,', 'el', 'cual', 'prepar@@', 'ará', 'tu', 'camino', 'delante', 'de', 'ti']
+2021-03-18 17:56:52,288 - DEBUG - joeynmt.training - 	Raw hypothesis: ['a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'ku', 'ja', 'jesus', 'ajxy', 'jeꞌe', 'jeꞌe', 'jeꞌe', 'jeꞌe', 'jeꞌe', 'jeꞌe', 'jeꞌe', 'jeꞌe', 'jeꞌe', 'jeꞌe', 'jeꞌe']
+2021-03-18 17:56:52,288 - INFO - joeynmt.training - 	Source:     porque éste es de quien está escrito he aquí, yo envío mi mensajero delante de tu faz, el cual preparará tu camino delante de ti
+2021-03-18 17:56:52,288 - INFO - joeynmt.training - 	Reference:  ix juan jëduꞌun nënëëmë ma jëduꞌun kyujaayën ukꞌix ajxy, tsyamëtsyë ngugapxy ngejxëꞌëky, jeꞌejë mnëë mduꞌu xyꞌaꞌixëdyaꞌaganëp
+2021-03-18 17:56:52,288 - INFO - joeynmt.training - 	Hypothesis: a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a ku ja jesus ajxy jeꞌe jeꞌe jeꞌe jeꞌe jeꞌe jeꞌe jeꞌe jeꞌe jeꞌe jeꞌe jeꞌe
+2021-03-18 17:56:52,288 - INFO - joeynmt.training - Example #1
+2021-03-18 17:56:52,288 - DEBUG - joeynmt.training - 	Raw source:     ['otra', 'vez', 'os', 'digo,', 'que', 'es', 'más', 'f@@', 'á@@', 'ci@@', 'l', 'pas@@', 'ar', 'un', 'ca@@', 'me@@', 'l@@', 'lo', 'por', 'el', 'o@@', 'jo', 'de', 'una', 'agu@@', 'ja@@', ',', 'que', 'entrar', 'un', 'r@@', 'ico', 'en', 'el', 'reino', 'de', 'dios']
+2021-03-18 17:56:52,288 - DEBUG - joeynmt.training - 	Raw hypothesis: ['a', 'a', 'a', 'ja', 'jesus', 'ajxy', 'ënajty', 'ënajty', 'ënajty', 'ënajty', 'ënajty', 'ënajty', 'ënajty', 'ënajty', 'ënajty', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të']
+2021-03-18 17:56:52,288 - INFO - joeynmt.training - 	Source:     otra vez os digo, que es más fácil pasar un camello por el ojo de una aguja, que entrar un rico en el reino de dios
+2021-03-18 17:56:52,288 - INFO - joeynmt.training - 	Reference:  janë jëduꞌun duꞌumbë, maas pakyë camello jiipy tuꞌuk nyaxëꞌëwët xuꞌunty jut jooty kejee ku mayëë jëyaꞌay tuꞌuk tyëgëꞌëwët ma dios ja yꞌaneꞌemdaaktën
+2021-03-18 17:56:52,288 - INFO - joeynmt.training - 	Hypothesis: a a a ja jesus ajxy ënajty ënajty ënajty ënajty ënajty ënajty ënajty ënajty ënajty të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të
+2021-03-18 17:56:52,288 - INFO - joeynmt.training - Example #2
+2021-03-18 17:56:52,288 - DEBUG - joeynmt.training - 	Raw source:     ['los', 'jue@@', 'ces', 'de', 'cada', 'estado', 'se', 'ar@@', 'regl@@', 'arán', 'a', 'dich@@', 'a', 'constitu@@', 'ción,', 'leyes', 'y', 'tra@@', 't@@', 'ados,', 'a', 'pes@@', 'ar', 'de', 'las', 'disposiciones', 'en', 'contr@@', 'ario', 'que', 'pued@@', 'a', 'haber', 'en', 'las', 'constitu@@', 'ciones', 'o', 'leyes', 'de', 'los', 'estados']
+2021-03-18 17:56:52,288 - DEBUG - joeynmt.training - 	Raw hypothesis: ['ja', 'ley', 'ajxy', 'ajxy', "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e"]
+2021-03-18 17:56:52,288 - INFO - joeynmt.training - 	Source:     los jueces de cada estado se arreglarán a dicha constitución, leyes y tratados, a pesar de las disposiciones en contrario que pueda haber en las constituciones o leyes de los estados
+2021-03-18 17:56:52,289 - INFO - joeynmt.training - 	Reference:  ja ajxy mëj ane'embë'ajpë ma jaty ja estados ja ane'emt kujaay kugeetsypë ajxy nyë'ëgë kudyunaampy, ja leyes mët ja ajxy të yajtëdyëgë'eyëbë, oy ja estados y'amdso ane'emt kujaay kugeetsypë o ja lyeyes ajxy ënajty tëgatsy jyanëjts'ane'emë'ëy
+2021-03-18 17:56:52,289 - INFO - joeynmt.training - 	Hypothesis: ja ley ajxy ajxy je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e
+2021-03-18 17:56:52,289 - INFO - joeynmt.training - Example #3
+2021-03-18 17:56:52,289 - DEBUG - joeynmt.training - 	Raw source:     ['qued@@', 'a', 'pro@@', 'h@@', 'ib@@', 'ido', 'en', 'todo', 'c@@', 'entro', 'de', 'trabaj@@', 'o,', 'el', 'estableci@@', 'miento', 'de', 'ex@@', 'pen@@', 'dios', 'de', 'beb@@', 'idas', 'emb@@', 'ri@@', 'ag@@', 'antes', 'y', 'de', 'cas@@', 'as', 'de', 'ju@@', 'ego', 'de', 'az@@', 'ar']
+2021-03-18 17:56:52,289 - DEBUG - joeynmt.training - 	Raw hypothesis: ['ku', 'ja', 'ley', 'ajxy', "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e"]
+2021-03-18 17:56:52,289 - INFO - joeynmt.training - 	Source:     queda prohibido en todo centro de trabajo, el establecimiento de expendios de bebidas embriagantes y de casas de juego de azar
+2021-03-18 17:56:52,289 - INFO - joeynmt.training - 	Reference:  kabë ku'udujt ku joknëë ajxy jim tyoogët ma jaty ja tuundaakt ni ku ja tëjk ajxy pyëda'agët ma ajxy suertë y'ëyë'ëgyën
+2021-03-18 17:56:52,289 - INFO - joeynmt.training - 	Hypothesis: ku ja ley ajxy je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e
+2021-03-18 17:56:52,289 - INFO - joeynmt.training - Validation result (greedy) at epoch  55, step     2000: bleu:   0.31, loss: 109193.6641, ppl: 120.0533, duration: 10.7097s
+2021-03-18 17:57:07,586 - INFO - joeynmt.training - Epoch  55: total training loss 165.58
+2021-03-18 17:57:07,587 - INFO - joeynmt.training - EPOCH 56
+2021-03-18 17:57:23,133 - INFO - joeynmt.training - Epoch  56: total training loss 164.98
+2021-03-18 17:57:23,133 - INFO - joeynmt.training - EPOCH 57
+2021-03-18 17:57:39,483 - INFO - joeynmt.training - Epoch  57: total training loss 164.43
+2021-03-18 17:57:39,483 - INFO - joeynmt.training - EPOCH 58
+2021-03-18 17:57:55,613 - INFO - joeynmt.training - Epoch  58: total training loss 163.93
+2021-03-18 17:57:55,614 - INFO - joeynmt.training - EPOCH 59
+2021-03-18 17:58:11,538 - INFO - joeynmt.training - Epoch  59: total training loss 163.58
+2021-03-18 17:58:11,539 - INFO - joeynmt.training - EPOCH 60
+2021-03-18 17:58:27,393 - INFO - joeynmt.training - Epoch  60: total training loss 163.05
+2021-03-18 17:58:27,394 - INFO - joeynmt.training - EPOCH 61
+2021-03-18 17:58:43,552 - INFO - joeynmt.training - Epoch  61: total training loss 162.48
+2021-03-18 17:58:43,552 - INFO - joeynmt.training - EPOCH 62
+2021-03-18 17:58:59,430 - INFO - joeynmt.training - Epoch  62: total training loss 162.00
+2021-03-18 17:58:59,430 - INFO - joeynmt.training - EPOCH 63
+2021-03-18 17:59:15,121 - INFO - joeynmt.training - Epoch  63: total training loss 161.44
+2021-03-18 17:59:15,121 - INFO - joeynmt.training - EPOCH 64
+2021-03-18 17:59:31,155 - INFO - joeynmt.training - Epoch  64: total training loss 160.92
+2021-03-18 17:59:31,155 - INFO - joeynmt.training - EPOCH 65
+2021-03-18 17:59:46,669 - INFO - joeynmt.training - Epoch  65: total training loss 160.48
+2021-03-18 17:59:46,669 - INFO - joeynmt.training - EPOCH 66
+2021-03-18 18:00:02,460 - INFO - joeynmt.training - Epoch  66: total training loss 160.02
+2021-03-18 18:00:02,460 - INFO - joeynmt.training - EPOCH 67
+2021-03-18 18:00:18,232 - INFO - joeynmt.training - Epoch  67: total training loss 159.60
+2021-03-18 18:00:18,233 - INFO - joeynmt.training - EPOCH 68
+2021-03-18 18:00:38,083 - INFO - joeynmt.training - Hooray! New best validation result [ppl]!
+2021-03-18 18:00:38,083 - INFO - joeynmt.training - Saving new checkpoint.
+2021-03-18 18:00:38,123 - INFO - joeynmt.training - Example #0
+2021-03-18 18:00:38,124 - DEBUG - joeynmt.training - 	Raw source:     ['porque', 'éste', 'es', 'de', 'quien', 'está', 'escrito', 'he', 'aquí,', 'yo', 'en@@', 'ví@@', 'o', 'mi', 'men@@', 's@@', 'aj@@', 'ero', 'delante', 'de', 'tu', 'fa@@', 'z,', 'el', 'cual', 'prepar@@', 'ará', 'tu', 'camino', 'delante', 'de', 'ti']
+2021-03-18 18:00:38,124 - DEBUG - joeynmt.training - 	Raw hypothesis: ['a', 'a', 'paadyëts,', 'ku', 'ja', 'yaꞌay', 'ajxy', 'jëduꞌun', 'jëduꞌun', 'jëduꞌun', 'jëduꞌun', 'jëduꞌun', 'jëduꞌun', 'jëduꞌun', 'jëduꞌun', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të']
+2021-03-18 18:00:38,124 - INFO - joeynmt.training - 	Source:     porque éste es de quien está escrito he aquí, yo envío mi mensajero delante de tu faz, el cual preparará tu camino delante de ti
+2021-03-18 18:00:38,124 - INFO - joeynmt.training - 	Reference:  ix juan jëduꞌun nënëëmë ma jëduꞌun kyujaayën ukꞌix ajxy, tsyamëtsyë ngugapxy ngejxëꞌëky, jeꞌejë mnëë mduꞌu xyꞌaꞌixëdyaꞌaganëp
+2021-03-18 18:00:38,124 - INFO - joeynmt.training - 	Hypothesis: a a paadyëts, ku ja yaꞌay ajxy jëduꞌun jëduꞌun jëduꞌun jëduꞌun jëduꞌun jëduꞌun jëduꞌun jëduꞌun të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të
+2021-03-18 18:00:38,124 - INFO - joeynmt.training - Example #1
+2021-03-18 18:00:38,124 - DEBUG - joeynmt.training - 	Raw source:     ['otra', 'vez', 'os', 'digo,', 'que', 'es', 'más', 'f@@', 'á@@', 'ci@@', 'l', 'pas@@', 'ar', 'un', 'ca@@', 'me@@', 'l@@', 'lo', 'por', 'el', 'o@@', 'jo', 'de', 'una', 'agu@@', 'ja@@', ',', 'que', 'entrar', 'un', 'r@@', 'ico', 'en', 'el', 'reino', 'de', 'dios']
+2021-03-18 18:00:38,124 - DEBUG - joeynmt.training - 	Raw hypothesis: ['a', 'ja', 'jesus', 'ja', 'yaꞌay', 'ajxy', 'ënajty', 'ënajty', 'ënajty', 'ënajty', 'ënajty', 'ënajty', 'ënajty', 'ënajty', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të']
+2021-03-18 18:00:38,124 - INFO - joeynmt.training - 	Source:     otra vez os digo, que es más fácil pasar un camello por el ojo de una aguja, que entrar un rico en el reino de dios
+2021-03-18 18:00:38,124 - INFO - joeynmt.training - 	Reference:  janë jëduꞌun duꞌumbë, maas pakyë camello jiipy tuꞌuk nyaxëꞌëwët xuꞌunty jut jooty kejee ku mayëë jëyaꞌay tuꞌuk tyëgëꞌëwët ma dios ja yꞌaneꞌemdaaktën
+2021-03-18 18:00:38,125 - INFO - joeynmt.training - 	Hypothesis: a ja jesus ja yaꞌay ajxy ënajty ënajty ënajty ënajty ënajty ënajty ënajty ënajty të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të
+2021-03-18 18:00:38,125 - INFO - joeynmt.training - Example #2
+2021-03-18 18:00:38,125 - DEBUG - joeynmt.training - 	Raw source:     ['los', 'jue@@', 'ces', 'de', 'cada', 'estado', 'se', 'ar@@', 'regl@@', 'arán', 'a', 'dich@@', 'a', 'constitu@@', 'ción,', 'leyes', 'y', 'tra@@', 't@@', 'ados,', 'a', 'pes@@', 'ar', 'de', 'las', 'disposiciones', 'en', 'contr@@', 'ario', 'que', 'pued@@', 'a', 'haber', 'en', 'las', 'constitu@@', 'ciones', 'o', 'leyes', 'de', 'los', 'estados']
+2021-03-18 18:00:38,125 - DEBUG - joeynmt.training - 	Raw hypothesis: ['ku', 'ja', 'ley', 'ajxy', "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un"]
+2021-03-18 18:00:38,125 - INFO - joeynmt.training - 	Source:     los jueces de cada estado se arreglarán a dicha constitución, leyes y tratados, a pesar de las disposiciones en contrario que pueda haber en las constituciones o leyes de los estados
+2021-03-18 18:00:38,125 - INFO - joeynmt.training - 	Reference:  ja ajxy mëj ane'embë'ajpë ma jaty ja estados ja ane'emt kujaay kugeetsypë ajxy nyë'ëgë kudyunaampy, ja leyes mët ja ajxy të yajtëdyëgë'eyëbë, oy ja estados y'amdso ane'emt kujaay kugeetsypë o ja lyeyes ajxy ënajty tëgatsy jyanëjts'ane'emë'ëy
+2021-03-18 18:00:38,125 - INFO - joeynmt.training - 	Hypothesis: ku ja ley ajxy je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un
+2021-03-18 18:00:38,125 - INFO - joeynmt.training - Example #3
+2021-03-18 18:00:38,125 - DEBUG - joeynmt.training - 	Raw source:     ['qued@@', 'a', 'pro@@', 'h@@', 'ib@@', 'ido', 'en', 'todo', 'c@@', 'entro', 'de', 'trabaj@@', 'o,', 'el', 'estableci@@', 'miento', 'de', 'ex@@', 'pen@@', 'dios', 'de', 'beb@@', 'idas', 'emb@@', 'ri@@', 'ag@@', 'antes', 'y', 'de', 'cas@@', 'as', 'de', 'ju@@', 'ego', 'de', 'az@@', 'ar']
+2021-03-18 18:00:38,125 - DEBUG - joeynmt.training - 	Raw hypothesis: ['ku', 'ajxy', "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e"]
+2021-03-18 18:00:38,125 - INFO - joeynmt.training - 	Source:     queda prohibido en todo centro de trabajo, el establecimiento de expendios de bebidas embriagantes y de casas de juego de azar
+2021-03-18 18:00:38,125 - INFO - joeynmt.training - 	Reference:  kabë ku'udujt ku joknëë ajxy jim tyoogët ma jaty ja tuundaakt ni ku ja tëjk ajxy pyëda'agët ma ajxy suertë y'ëyë'ëgyën
+2021-03-18 18:00:38,125 - INFO - joeynmt.training - 	Hypothesis: ku ajxy je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e
+2021-03-18 18:00:38,126 - INFO - joeynmt.training - Validation result (greedy) at epoch  68, step     2500: bleu:   0.54, loss: 106178.1172, ppl: 105.1838, duration: 10.7071s
+2021-03-18 18:00:44,648 - INFO - joeynmt.training - Epoch  68: total training loss 159.03
+2021-03-18 18:00:44,649 - INFO - joeynmt.training - EPOCH 69
+2021-03-18 18:01:00,223 - INFO - joeynmt.training - Epoch  69: total training loss 158.68
+2021-03-18 18:01:00,224 - INFO - joeynmt.training - EPOCH 70
+2021-03-18 18:01:16,499 - INFO - joeynmt.training - Epoch  70: total training loss 158.24
+2021-03-18 18:01:16,500 - INFO - joeynmt.training - EPOCH 71
+2021-03-18 18:01:32,120 - INFO - joeynmt.training - Epoch  71: total training loss 157.78
+2021-03-18 18:01:32,120 - INFO - joeynmt.training - EPOCH 72
+2021-03-18 18:01:48,227 - INFO - joeynmt.training - Epoch  72: total training loss 157.28
+2021-03-18 18:01:48,228 - INFO - joeynmt.training - EPOCH 73
+2021-03-18 18:02:04,396 - INFO - joeynmt.training - Epoch  73: total training loss 156.90
+2021-03-18 18:02:04,397 - INFO - joeynmt.training - EPOCH 74
+2021-03-18 18:02:20,128 - INFO - joeynmt.training - Epoch  74: total training loss 156.42
+2021-03-18 18:02:20,129 - INFO - joeynmt.training - EPOCH 75
+2021-03-18 18:02:36,555 - INFO - joeynmt.training - Epoch  75: total training loss 156.01
+2021-03-18 18:02:36,555 - INFO - joeynmt.training - EPOCH 76
+2021-03-18 18:02:52,704 - INFO - joeynmt.training - Epoch  76: total training loss 155.43
+2021-03-18 18:02:52,704 - INFO - joeynmt.training - EPOCH 77
+2021-03-18 18:03:08,572 - INFO - joeynmt.training - Epoch  77: total training loss 155.21
+2021-03-18 18:03:08,572 - INFO - joeynmt.training - EPOCH 78
+2021-03-18 18:03:24,675 - INFO - joeynmt.training - Epoch  78: total training loss 154.76
+2021-03-18 18:03:24,675 - INFO - joeynmt.training - EPOCH 79
+2021-03-18 18:03:40,509 - INFO - joeynmt.training - Epoch  79: total training loss 154.34
+2021-03-18 18:03:40,509 - INFO - joeynmt.training - EPOCH 80
+2021-03-18 18:03:56,725 - INFO - joeynmt.training - Epoch  80: total training loss 153.96
+2021-03-18 18:03:56,725 - INFO - joeynmt.training - EPOCH 81
+2021-03-18 18:04:12,589 - INFO - joeynmt.training - Epoch  81: total training loss 153.54
+2021-03-18 18:04:12,589 - INFO - joeynmt.training - EPOCH 82
+2021-03-18 18:04:13,459 - INFO - joeynmt.training - Epoch  82, Step:     3000, Batch Loss:     4.063243, Tokens per Sec:     4560, Lr: 0.000300
+2021-03-18 18:04:24,200 - INFO - joeynmt.training - Hooray! New best validation result [ppl]!
+2021-03-18 18:04:24,200 - INFO - joeynmt.training - Saving new checkpoint.
+2021-03-18 18:04:24,223 - INFO - joeynmt.training - Example #0
+2021-03-18 18:04:24,223 - DEBUG - joeynmt.training - 	Raw source:     ['porque', 'éste', 'es', 'de', 'quien', 'está', 'escrito', 'he', 'aquí,', 'yo', 'en@@', 'ví@@', 'o', 'mi', 'men@@', 's@@', 'aj@@', 'ero', 'delante', 'de', 'tu', 'fa@@', 'z,', 'el', 'cual', 'prepar@@', 'ará', 'tu', 'camino', 'delante', 'de', 'ti']
+2021-03-18 18:04:24,223 - DEBUG - joeynmt.training - 	Raw hypothesis: ['pero', 'ku', 'ja', 'yaꞌay', 'ajxy', 'nyëmaay', '¿@@', 'jëduꞌun', 'jëduꞌun', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'xykye@@', 'ꞌëw@@', 'aꞌany']
+2021-03-18 18:04:24,223 - INFO - joeynmt.training - 	Source:     porque éste es de quien está escrito he aquí, yo envío mi mensajero delante de tu faz, el cual preparará tu camino delante de ti
+2021-03-18 18:04:24,223 - INFO - joeynmt.training - 	Reference:  ix juan jëduꞌun nënëëmë ma jëduꞌun kyujaayën ukꞌix ajxy, tsyamëtsyë ngugapxy ngejxëꞌëky, jeꞌejë mnëë mduꞌu xyꞌaꞌixëdyaꞌaganëp
+2021-03-18 18:04:24,223 - INFO - joeynmt.training - 	Hypothesis: pero ku ja yaꞌay ajxy nyëmaay ¿jëduꞌun jëduꞌun të të të të të të të të të të të xykyeꞌëwaꞌany
+2021-03-18 18:04:24,224 - INFO - joeynmt.training - Example #1
+2021-03-18 18:04:24,224 - DEBUG - joeynmt.training - 	Raw source:     ['otra', 'vez', 'os', 'digo,', 'que', 'es', 'más', 'f@@', 'á@@', 'ci@@', 'l', 'pas@@', 'ar', 'un', 'ca@@', 'me@@', 'l@@', 'lo', 'por', 'el', 'o@@', 'jo', 'de', 'una', 'agu@@', 'ja@@', ',', 'que', 'entrar', 'un', 'r@@', 'ico', 'en', 'el', 'reino', 'de', 'dios']
+2021-03-18 18:04:24,224 - DEBUG - joeynmt.training - 	Raw hypothesis: ['a', 'ku', 'ja', 'yaꞌay', 'ajxy', 'ënajty', 'ënajty', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të']
+2021-03-18 18:04:24,224 - INFO - joeynmt.training - 	Source:     otra vez os digo, que es más fácil pasar un camello por el ojo de una aguja, que entrar un rico en el reino de dios
+2021-03-18 18:04:24,224 - INFO - joeynmt.training - 	Reference:  janë jëduꞌun duꞌumbë, maas pakyë camello jiipy tuꞌuk nyaxëꞌëwët xuꞌunty jut jooty kejee ku mayëë jëyaꞌay tuꞌuk tyëgëꞌëwët ma dios ja yꞌaneꞌemdaaktën
+2021-03-18 18:04:24,224 - INFO - joeynmt.training - 	Hypothesis: a ku ja yaꞌay ajxy ënajty ënajty të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të
+2021-03-18 18:04:24,224 - INFO - joeynmt.training - Example #2
+2021-03-18 18:04:24,224 - DEBUG - joeynmt.training - 	Raw source:     ['los', 'jue@@', 'ces', 'de', 'cada', 'estado', 'se', 'ar@@', 'regl@@', 'arán', 'a', 'dich@@', 'a', 'constitu@@', 'ción,', 'leyes', 'y', 'tra@@', 't@@', 'ados,', 'a', 'pes@@', 'ar', 'de', 'las', 'disposiciones', 'en', 'contr@@', 'ario', 'que', 'pued@@', 'a', 'haber', 'en', 'las', 'constitu@@', 'ciones', 'o', 'leyes', 'de', 'los', 'estados']
+2021-03-18 18:04:24,224 - DEBUG - joeynmt.training - 	Raw hypothesis: ['ku', 'ja', 'ley', 'ajxy', "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un"]
+2021-03-18 18:04:24,224 - INFO - joeynmt.training - 	Source:     los jueces de cada estado se arreglarán a dicha constitución, leyes y tratados, a pesar de las disposiciones en contrario que pueda haber en las constituciones o leyes de los estados
+2021-03-18 18:04:24,224 - INFO - joeynmt.training - 	Reference:  ja ajxy mëj ane'embë'ajpë ma jaty ja estados ja ane'emt kujaay kugeetsypë ajxy nyë'ëgë kudyunaampy, ja leyes mët ja ajxy të yajtëdyëgë'eyëbë, oy ja estados y'amdso ane'emt kujaay kugeetsypë o ja lyeyes ajxy ënajty tëgatsy jyanëjts'ane'emë'ëy
+2021-03-18 18:04:24,224 - INFO - joeynmt.training - 	Hypothesis: ku ja ley ajxy jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un
+2021-03-18 18:04:24,224 - INFO - joeynmt.training - Example #3
+2021-03-18 18:04:24,224 - DEBUG - joeynmt.training - 	Raw source:     ['qued@@', 'a', 'pro@@', 'h@@', 'ib@@', 'ido', 'en', 'todo', 'c@@', 'entro', 'de', 'trabaj@@', 'o,', 'el', 'estableci@@', 'miento', 'de', 'ex@@', 'pen@@', 'dios', 'de', 'beb@@', 'idas', 'emb@@', 'ri@@', 'ag@@', 'antes', 'y', 'de', 'cas@@', 'as', 'de', 'ju@@', 'ego', 'de', 'az@@', 'ar']
+2021-03-18 18:04:24,224 - DEBUG - joeynmt.training - 	Raw hypothesis: ['ku', 'ajxy', "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të']
+2021-03-18 18:04:24,224 - INFO - joeynmt.training - 	Source:     queda prohibido en todo centro de trabajo, el establecimiento de expendios de bebidas embriagantes y de casas de juego de azar
+2021-03-18 18:04:24,224 - INFO - joeynmt.training - 	Reference:  kabë ku'udujt ku joknëë ajxy jim tyoogët ma jaty ja tuundaakt ni ku ja tëjk ajxy pyëda'agët ma ajxy suertë y'ëyë'ëgyën
+2021-03-18 18:04:24,224 - INFO - joeynmt.training - 	Hypothesis: ku ajxy je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un të të të të të të të të të të të të të të të të të të të të të të të të
+2021-03-18 18:04:24,224 - INFO - joeynmt.training - Validation result (greedy) at epoch  82, step     3000: bleu:   0.82, loss: 104291.0781, ppl:  96.8309, duration: 10.7649s
+2021-03-18 18:04:38,850 - INFO - joeynmt.training - Epoch  82: total training loss 153.18
+2021-03-18 18:04:38,850 - INFO - joeynmt.training - EPOCH 83
+2021-03-18 18:04:54,568 - INFO - joeynmt.training - Epoch  83: total training loss 152.63
+2021-03-18 18:04:54,569 - INFO - joeynmt.training - EPOCH 84
+2021-03-18 18:05:10,174 - INFO - joeynmt.training - Epoch  84: total training loss 152.37
+2021-03-18 18:05:10,174 - INFO - joeynmt.training - EPOCH 85
+2021-03-18 18:05:25,864 - INFO - joeynmt.training - Epoch  85: total training loss 151.82
+2021-03-18 18:05:25,864 - INFO - joeynmt.training - EPOCH 86
+2021-03-18 18:05:41,812 - INFO - joeynmt.training - Epoch  86: total training loss 151.61
+2021-03-18 18:05:41,813 - INFO - joeynmt.training - EPOCH 87
+2021-03-18 18:05:57,652 - INFO - joeynmt.training - Epoch  87: total training loss 151.01
+2021-03-18 18:05:57,652 - INFO - joeynmt.training - EPOCH 88
+2021-03-18 18:06:13,488 - INFO - joeynmt.training - Epoch  88: total training loss 150.89
+2021-03-18 18:06:13,488 - INFO - joeynmt.training - EPOCH 89
+2021-03-18 18:06:29,472 - INFO - joeynmt.training - Epoch  89: total training loss 150.48
+2021-03-18 18:06:29,472 - INFO - joeynmt.training - EPOCH 90
+2021-03-18 18:06:45,159 - INFO - joeynmt.training - Epoch  90: total training loss 149.96
+2021-03-18 18:06:45,159 - INFO - joeynmt.training - EPOCH 91
+2021-03-18 18:07:00,916 - INFO - joeynmt.training - Epoch  91: total training loss 149.61
+2021-03-18 18:07:00,917 - INFO - joeynmt.training - EPOCH 92
+2021-03-18 18:07:16,688 - INFO - joeynmt.training - Epoch  92: total training loss 149.33
+2021-03-18 18:07:16,688 - INFO - joeynmt.training - EPOCH 93
+2021-03-18 18:07:32,494 - INFO - joeynmt.training - Epoch  93: total training loss 148.89
+2021-03-18 18:07:32,495 - INFO - joeynmt.training - EPOCH 94
+2021-03-18 18:07:48,332 - INFO - joeynmt.training - Epoch  94: total training loss 148.46
+2021-03-18 18:07:48,333 - INFO - joeynmt.training - EPOCH 95
+2021-03-18 18:08:08,550 - INFO - joeynmt.training - Hooray! New best validation result [ppl]!
+2021-03-18 18:08:08,551 - INFO - joeynmt.training - Saving new checkpoint.
+2021-03-18 18:08:08,576 - INFO - joeynmt.training - Example #0
+2021-03-18 18:08:08,577 - DEBUG - joeynmt.training - 	Raw source:     ['porque', 'éste', 'es', 'de', 'quien', 'está', 'escrito', 'he', 'aquí,', 'yo', 'en@@', 'ví@@', 'o', 'mi', 'men@@', 's@@', 'aj@@', 'ero', 'delante', 'de', 'tu', 'fa@@', 'z,', 'el', 'cual', 'prepar@@', 'ará', 'tu', 'camino', 'delante', 'de', 'ti']
+2021-03-18 18:08:08,577 - DEBUG - joeynmt.training - 	Raw hypothesis: ['pero', 'ja', 'yaꞌay', 'ajxy', 'jeꞌe', 'jeꞌe', 'jeꞌe', 'jeꞌe', 'jeꞌe', 'jeꞌe', 'jeꞌe', 'jeꞌe', 'jeꞌe', 'jeꞌe', 'jeꞌe', 'jeꞌe', 'jeꞌe', 'jeꞌe', 'jeꞌe', 'jeꞌe', 'jeꞌe', 'jeꞌe', 'jeꞌe', 'jeꞌe', 'n@@', 'n@@', 'n@@', 'guꞌu@@', 'ꞌëw@@', 'aꞌany']
+2021-03-18 18:08:08,577 - INFO - joeynmt.training - 	Source:     porque éste es de quien está escrito he aquí, yo envío mi mensajero delante de tu faz, el cual preparará tu camino delante de ti
+2021-03-18 18:08:08,577 - INFO - joeynmt.training - 	Reference:  ix juan jëduꞌun nënëëmë ma jëduꞌun kyujaayën ukꞌix ajxy, tsyamëtsyë ngugapxy ngejxëꞌëky, jeꞌejë mnëë mduꞌu xyꞌaꞌixëdyaꞌaganëp
+2021-03-18 18:08:08,577 - INFO - joeynmt.training - 	Hypothesis: pero ja yaꞌay ajxy jeꞌe jeꞌe jeꞌe jeꞌe jeꞌe jeꞌe jeꞌe jeꞌe jeꞌe jeꞌe jeꞌe jeꞌe jeꞌe jeꞌe jeꞌe jeꞌe jeꞌe jeꞌe jeꞌe jeꞌe nnnguꞌuꞌëwaꞌany
+2021-03-18 18:08:08,577 - INFO - joeynmt.training - Example #1
+2021-03-18 18:08:08,577 - DEBUG - joeynmt.training - 	Raw source:     ['otra', 'vez', 'os', 'digo,', 'que', 'es', 'más', 'f@@', 'á@@', 'ci@@', 'l', 'pas@@', 'ar', 'un', 'ca@@', 'me@@', 'l@@', 'lo', 'por', 'el', 'o@@', 'jo', 'de', 'una', 'agu@@', 'ja@@', ',', 'que', 'entrar', 'un', 'r@@', 'ico', 'en', 'el', 'reino', 'de', 'dios']
+2021-03-18 18:08:08,577 - DEBUG - joeynmt.training - 	Raw hypothesis: ['ku', 'ja', 'yaꞌay', 'ajxy', 'ënajty', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'xykye@@', 'ꞌ@@', 'ꞌ@@', 'ꞌ@@', 'ꞌ@@', 'ꞌ@@', 'ꞌ@@', 'ꞌ@@', 'ꞌ@@', 'ꞌ@@', 'ꞌ@@', 'ꞌ@@', 'ꞌ@@', 'ꞌ@@']
+2021-03-18 18:08:08,577 - INFO - joeynmt.training - 	Source:     otra vez os digo, que es más fácil pasar un camello por el ojo de una aguja, que entrar un rico en el reino de dios
+2021-03-18 18:08:08,577 - INFO - joeynmt.training - 	Reference:  janë jëduꞌun duꞌumbë, maas pakyë camello jiipy tuꞌuk nyaxëꞌëwët xuꞌunty jut jooty kejee ku mayëë jëyaꞌay tuꞌuk tyëgëꞌëwët ma dios ja yꞌaneꞌemdaaktën
+2021-03-18 18:08:08,577 - INFO - joeynmt.training - 	Hypothesis: ku ja yaꞌay ajxy ënajty të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të xykyeꞌꞌꞌꞌꞌꞌꞌꞌꞌꞌꞌꞌꞌ@@
+2021-03-18 18:08:08,577 - INFO - joeynmt.training - Example #2
+2021-03-18 18:08:08,577 - DEBUG - joeynmt.training - 	Raw source:     ['los', 'jue@@', 'ces', 'de', 'cada', 'estado', 'se', 'ar@@', 'regl@@', 'arán', 'a', 'dich@@', 'a', 'constitu@@', 'ción,', 'leyes', 'y', 'tra@@', 't@@', 'ados,', 'a', 'pes@@', 'ar', 'de', 'las', 'disposiciones', 'en', 'contr@@', 'ario', 'que', 'pued@@', 'a', 'haber', 'en', 'las', 'constitu@@', 'ciones', 'o', 'leyes', 'de', 'los', 'estados']
+2021-03-18 18:08:08,577 - DEBUG - joeynmt.training - 	Raw hypothesis: ['ja', 'ley', 'ajxy', "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", "jëdu'un", 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'të', 'tyun@@', 'ët']
+2021-03-18 18:08:08,577 - INFO - joeynmt.training - 	Source:     los jueces de cada estado se arreglarán a dicha constitución, leyes y tratados, a pesar de las disposiciones en contrario que pueda haber en las constituciones o leyes de los estados
+2021-03-18 18:08:08,577 - INFO - joeynmt.training - 	Reference:  ja ajxy mëj ane'embë'ajpë ma jaty ja estados ja ane'emt kujaay kugeetsypë ajxy nyë'ëgë kudyunaampy, ja leyes mët ja ajxy të yajtëdyëgë'eyëbë, oy ja estados y'amdso ane'emt kujaay kugeetsypë o ja lyeyes ajxy ënajty tëgatsy jyanëjts'ane'emë'ëy
+2021-03-18 18:08:08,577 - INFO - joeynmt.training - 	Hypothesis: ja ley ajxy je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un jëdu'un të të të të të të të të tyunët
+2021-03-18 18:08:08,577 - INFO - joeynmt.training - Example #3
+2021-03-18 18:08:08,577 - DEBUG - joeynmt.training - 	Raw source:     ['qued@@', 'a', 'pro@@', 'h@@', 'ib@@', 'ido', 'en', 'todo', 'c@@', 'entro', 'de', 'trabaj@@', 'o,', 'el', 'estableci@@', 'miento', 'de', 'ex@@', 'pen@@', 'dios', 'de', 'beb@@', 'idas', 'emb@@', 'ri@@', 'ag@@', 'antes', 'y', 'de', 'cas@@', 'as', 'de', 'ju@@', 'ego', 'de', 'az@@', 'ar']
+2021-03-18 18:08:08,578 - DEBUG - joeynmt.training - 	Raw hypothesis: ['ku', 'ajxy', "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "je'e", "kya'a@@", 'tun@@', "a'any"]
+2021-03-18 18:08:08,578 - INFO - joeynmt.training - 	Source:     queda prohibido en todo centro de trabajo, el establecimiento de expendios de bebidas embriagantes y de casas de juego de azar
+2021-03-18 18:08:08,578 - INFO - joeynmt.training - 	Reference:  kabë ku'udujt ku joknëë ajxy jim tyoogët ma jaty ja tuundaakt ni ku ja tëjk ajxy pyëda'agët ma ajxy suertë y'ëyë'ëgyën
+2021-03-18 18:08:08,578 - INFO - joeynmt.training - 	Hypothesis: ku ajxy je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e je'e kya'atuna'any
+2021-03-18 18:08:08,578 - INFO - joeynmt.training - Validation result (greedy) at epoch  95, step     3500: bleu:   1.22, loss: 102422.4531, ppl:  89.2134, duration: 10.8179s
+2021-03-18 18:08:15,136 - INFO - joeynmt.training - Epoch  95: total training loss 148.14
+2021-03-18 18:08:15,136 - INFO - joeynmt.training - EPOCH 96
+2021-03-18 18:08:30,939 - INFO - joeynmt.training - Epoch  96: total training loss 147.77
+2021-03-18 18:08:30,940 - INFO - joeynmt.training - EPOCH 97
+2021-03-18 18:08:46,602 - INFO - joeynmt.training - Epoch  97: total training loss 147.49
+2021-03-18 18:08:46,602 - INFO - joeynmt.training - EPOCH 98
+2021-03-18 18:09:02,194 - INFO - joeynmt.training - Epoch  98: total training loss 147.15
+2021-03-18 18:09:02,196 - INFO - joeynmt.training - EPOCH 99
+2021-03-18 18:09:18,362 - INFO - joeynmt.training - Epoch  99: total training loss 146.67
+2021-03-18 18:09:18,362 - INFO - joeynmt.training - EPOCH 100
+2021-03-18 18:09:33,948 - INFO - joeynmt.training - Epoch 100: total training loss 146.39
+2021-03-18 18:09:33,948 - INFO - joeynmt.training - Training ended after 100 epochs.
+2021-03-18 18:09:33,948 - INFO - joeynmt.training - Best validation result (greedy) at step     3500:  89.21 ppl.
+2021-03-18 18:09:33,969 - INFO - joeynmt.prediction - Process device: cpu, n_gpu: 0, batch_size per device: 256
+2021-03-18 18:09:34,020 - INFO - joeynmt.prediction - Decoding on dev set (/data/joeynmt/mir.esmir/dev.bpe.mir)...
+2021-03-18 18:09:41,676 - INFO - joeynmt.prediction -  dev bleu[13a]:   2.03 [Beam search decoding with beam size = 3 and alpha = 1.0]
+2021-03-18 18:09:41,677 - INFO - joeynmt.prediction - Translations saved to: models/sin-random6/00003500.hyps.dev
+2021-03-18 18:09:41,677 - INFO - joeynmt.prediction - Decoding on test set (/data/joeynmt/mir.esmir/test.bpe.mir)...
+2021-03-18 18:09:44,463 - INFO - joeynmt.prediction - test bleu[13a]:   0.10 [Beam search decoding with beam size = 3 and alpha = 1.0]
+2021-03-18 18:09:44,464 - INFO - joeynmt.prediction - Translations saved to: models/sin-random6/00003500.hyps.test

@@ -1,0 +1,503 @@
+2021-03-19 16:19:15,636 - INFO - root - Hello! This is Joey-NMT (version 1.0).
+2021-03-19 16:19:15,707 - INFO - joeynmt.data - loading training data...
+2021-03-19 16:19:16,058 - INFO - joeynmt.data - building vocabulary...
+2021-03-19 16:19:16,258 - INFO - joeynmt.data - loading dev data...
+2021-03-19 16:19:16,295 - INFO - joeynmt.data - loading test data...
+2021-03-19 16:19:16,356 - INFO - joeynmt.data - data loaded.
+2021-03-19 16:19:17,532 - DEBUG - h5py._conv - Creating converter from 7 to 5
+2021-03-19 16:19:17,532 - DEBUG - h5py._conv - Creating converter from 5 to 7
+2021-03-19 16:19:17,532 - DEBUG - h5py._conv - Creating converter from 7 to 5
+2021-03-19 16:19:17,532 - DEBUG - h5py._conv - Creating converter from 5 to 7
+2021-03-19 16:19:18,584 - INFO - joeynmt.training - Total params: 12098816
+2021-03-19 16:19:18,585 - DEBUG - joeynmt.training - Trainable parameters: ['decoder.layer_norm.bias', 'decoder.layer_norm.weight', 'decoder.layers.0.dec_layer_norm.bias', 'decoder.layers.0.dec_layer_norm.weight', 'decoder.layers.0.feed_forward.layer_norm.bias', 'decoder.layers.0.feed_forward.layer_norm.weight', 'decoder.layers.0.feed_forward.pwff_layer.0.bias', 'decoder.layers.0.feed_forward.pwff_layer.0.weight', 'decoder.layers.0.feed_forward.pwff_layer.3.bias', 'decoder.layers.0.feed_forward.pwff_layer.3.weight', 'decoder.layers.0.src_trg_att.k_layer.bias', 'decoder.layers.0.src_trg_att.k_layer.weight', 'decoder.layers.0.src_trg_att.output_layer.bias', 'decoder.layers.0.src_trg_att.output_layer.weight', 'decoder.layers.0.src_trg_att.q_layer.bias', 'decoder.layers.0.src_trg_att.q_layer.weight', 'decoder.layers.0.src_trg_att.v_layer.bias', 'decoder.layers.0.src_trg_att.v_layer.weight', 'decoder.layers.0.trg_trg_att.k_layer.bias', 'decoder.layers.0.trg_trg_att.k_layer.weight', 'decoder.layers.0.trg_trg_att.output_layer.bias', 'decoder.layers.0.trg_trg_att.output_layer.weight', 'decoder.layers.0.trg_trg_att.q_layer.bias', 'decoder.layers.0.trg_trg_att.q_layer.weight', 'decoder.layers.0.trg_trg_att.v_layer.bias', 'decoder.layers.0.trg_trg_att.v_layer.weight', 'decoder.layers.0.x_layer_norm.bias', 'decoder.layers.0.x_layer_norm.weight', 'decoder.layers.1.dec_layer_norm.bias', 'decoder.layers.1.dec_layer_norm.weight', 'decoder.layers.1.feed_forward.layer_norm.bias', 'decoder.layers.1.feed_forward.layer_norm.weight', 'decoder.layers.1.feed_forward.pwff_layer.0.bias', 'decoder.layers.1.feed_forward.pwff_layer.0.weight', 'decoder.layers.1.feed_forward.pwff_layer.3.bias', 'decoder.layers.1.feed_forward.pwff_layer.3.weight', 'decoder.layers.1.src_trg_att.k_layer.bias', 'decoder.layers.1.src_trg_att.k_layer.weight', 'decoder.layers.1.src_trg_att.output_layer.bias', 'decoder.layers.1.src_trg_att.output_layer.weight', 'decoder.layers.1.src_trg_att.q_layer.bias', 'decoder.layers.1.src_trg_att.q_layer.weight', 'decoder.layers.1.src_trg_att.v_layer.bias', 'decoder.layers.1.src_trg_att.v_layer.weight', 'decoder.layers.1.trg_trg_att.k_layer.bias', 'decoder.layers.1.trg_trg_att.k_layer.weight', 'decoder.layers.1.trg_trg_att.output_layer.bias', 'decoder.layers.1.trg_trg_att.output_layer.weight', 'decoder.layers.1.trg_trg_att.q_layer.bias', 'decoder.layers.1.trg_trg_att.q_layer.weight', 'decoder.layers.1.trg_trg_att.v_layer.bias', 'decoder.layers.1.trg_trg_att.v_layer.weight', 'decoder.layers.1.x_layer_norm.bias', 'decoder.layers.1.x_layer_norm.weight', 'decoder.layers.2.dec_layer_norm.bias', 'decoder.layers.2.dec_layer_norm.weight', 'decoder.layers.2.feed_forward.layer_norm.bias', 'decoder.layers.2.feed_forward.layer_norm.weight', 'decoder.layers.2.feed_forward.pwff_layer.0.bias', 'decoder.layers.2.feed_forward.pwff_layer.0.weight', 'decoder.layers.2.feed_forward.pwff_layer.3.bias', 'decoder.layers.2.feed_forward.pwff_layer.3.weight', 'decoder.layers.2.src_trg_att.k_layer.bias', 'decoder.layers.2.src_trg_att.k_layer.weight', 'decoder.layers.2.src_trg_att.output_layer.bias', 'decoder.layers.2.src_trg_att.output_layer.weight', 'decoder.layers.2.src_trg_att.q_layer.bias', 'decoder.layers.2.src_trg_att.q_layer.weight', 'decoder.layers.2.src_trg_att.v_layer.bias', 'decoder.layers.2.src_trg_att.v_layer.weight', 'decoder.layers.2.trg_trg_att.k_layer.bias', 'decoder.layers.2.trg_trg_att.k_layer.weight', 'decoder.layers.2.trg_trg_att.output_layer.bias', 'decoder.layers.2.trg_trg_att.output_layer.weight', 'decoder.layers.2.trg_trg_att.q_layer.bias', 'decoder.layers.2.trg_trg_att.q_layer.weight', 'decoder.layers.2.trg_trg_att.v_layer.bias', 'decoder.layers.2.trg_trg_att.v_layer.weight', 'decoder.layers.2.x_layer_norm.bias', 'decoder.layers.2.x_layer_norm.weight', 'decoder.layers.3.dec_layer_norm.bias', 'decoder.layers.3.dec_layer_norm.weight', 'decoder.layers.3.feed_forward.layer_norm.bias', 'decoder.layers.3.feed_forward.layer_norm.weight', 'decoder.layers.3.feed_forward.pwff_layer.0.bias', 'decoder.layers.3.feed_forward.pwff_layer.0.weight', 'decoder.layers.3.feed_forward.pwff_layer.3.bias', 'decoder.layers.3.feed_forward.pwff_layer.3.weight', 'decoder.layers.3.src_trg_att.k_layer.bias', 'decoder.layers.3.src_trg_att.k_layer.weight', 'decoder.layers.3.src_trg_att.output_layer.bias', 'decoder.layers.3.src_trg_att.output_layer.weight', 'decoder.layers.3.src_trg_att.q_layer.bias', 'decoder.layers.3.src_trg_att.q_layer.weight', 'decoder.layers.3.src_trg_att.v_layer.bias', 'decoder.layers.3.src_trg_att.v_layer.weight', 'decoder.layers.3.trg_trg_att.k_layer.bias', 'decoder.layers.3.trg_trg_att.k_layer.weight', 'decoder.layers.3.trg_trg_att.output_layer.bias', 'decoder.layers.3.trg_trg_att.output_layer.weight', 'decoder.layers.3.trg_trg_att.q_layer.bias', 'decoder.layers.3.trg_trg_att.q_layer.weight', 'decoder.layers.3.trg_trg_att.v_layer.bias', 'decoder.layers.3.trg_trg_att.v_layer.weight', 'decoder.layers.3.x_layer_norm.bias', 'decoder.layers.3.x_layer_norm.weight', 'decoder.layers.4.dec_layer_norm.bias', 'decoder.layers.4.dec_layer_norm.weight', 'decoder.layers.4.feed_forward.layer_norm.bias', 'decoder.layers.4.feed_forward.layer_norm.weight', 'decoder.layers.4.feed_forward.pwff_layer.0.bias', 'decoder.layers.4.feed_forward.pwff_layer.0.weight', 'decoder.layers.4.feed_forward.pwff_layer.3.bias', 'decoder.layers.4.feed_forward.pwff_layer.3.weight', 'decoder.layers.4.src_trg_att.k_layer.bias', 'decoder.layers.4.src_trg_att.k_layer.weight', 'decoder.layers.4.src_trg_att.output_layer.bias', 'decoder.layers.4.src_trg_att.output_layer.weight', 'decoder.layers.4.src_trg_att.q_layer.bias', 'decoder.layers.4.src_trg_att.q_layer.weight', 'decoder.layers.4.src_trg_att.v_layer.bias', 'decoder.layers.4.src_trg_att.v_layer.weight', 'decoder.layers.4.trg_trg_att.k_layer.bias', 'decoder.layers.4.trg_trg_att.k_layer.weight', 'decoder.layers.4.trg_trg_att.output_layer.bias', 'decoder.layers.4.trg_trg_att.output_layer.weight', 'decoder.layers.4.trg_trg_att.q_layer.bias', 'decoder.layers.4.trg_trg_att.q_layer.weight', 'decoder.layers.4.trg_trg_att.v_layer.bias', 'decoder.layers.4.trg_trg_att.v_layer.weight', 'decoder.layers.4.x_layer_norm.bias', 'decoder.layers.4.x_layer_norm.weight', 'decoder.layers.5.dec_layer_norm.bias', 'decoder.layers.5.dec_layer_norm.weight', 'decoder.layers.5.feed_forward.layer_norm.bias', 'decoder.layers.5.feed_forward.layer_norm.weight', 'decoder.layers.5.feed_forward.pwff_layer.0.bias', 'decoder.layers.5.feed_forward.pwff_layer.0.weight', 'decoder.layers.5.feed_forward.pwff_layer.3.bias', 'decoder.layers.5.feed_forward.pwff_layer.3.weight', 'decoder.layers.5.src_trg_att.k_layer.bias', 'decoder.layers.5.src_trg_att.k_layer.weight', 'decoder.layers.5.src_trg_att.output_layer.bias', 'decoder.layers.5.src_trg_att.output_layer.weight', 'decoder.layers.5.src_trg_att.q_layer.bias', 'decoder.layers.5.src_trg_att.q_layer.weight', 'decoder.layers.5.src_trg_att.v_layer.bias', 'decoder.layers.5.src_trg_att.v_layer.weight', 'decoder.layers.5.trg_trg_att.k_layer.bias', 'decoder.layers.5.trg_trg_att.k_layer.weight', 'decoder.layers.5.trg_trg_att.output_layer.bias', 'decoder.layers.5.trg_trg_att.output_layer.weight', 'decoder.layers.5.trg_trg_att.q_layer.bias', 'decoder.layers.5.trg_trg_att.q_layer.weight', 'decoder.layers.5.trg_trg_att.v_layer.bias', 'decoder.layers.5.trg_trg_att.v_layer.weight', 'decoder.layers.5.x_layer_norm.bias', 'decoder.layers.5.x_layer_norm.weight', 'encoder.layer_norm.bias', 'encoder.layer_norm.weight', 'encoder.layers.0.feed_forward.layer_norm.bias', 'encoder.layers.0.feed_forward.layer_norm.weight', 'encoder.layers.0.feed_forward.pwff_layer.0.bias', 'encoder.layers.0.feed_forward.pwff_layer.0.weight', 'encoder.layers.0.feed_forward.pwff_layer.3.bias', 'encoder.layers.0.feed_forward.pwff_layer.3.weight', 'encoder.layers.0.layer_norm.bias', 'encoder.layers.0.layer_norm.weight', 'encoder.layers.0.src_src_att.k_layer.bias', 'encoder.layers.0.src_src_att.k_layer.weight', 'encoder.layers.0.src_src_att.output_layer.bias', 'encoder.layers.0.src_src_att.output_layer.weight', 'encoder.layers.0.src_src_att.q_layer.bias', 'encoder.layers.0.src_src_att.q_layer.weight', 'encoder.layers.0.src_src_att.v_layer.bias', 'encoder.layers.0.src_src_att.v_layer.weight', 'encoder.layers.1.feed_forward.layer_norm.bias', 'encoder.layers.1.feed_forward.layer_norm.weight', 'encoder.layers.1.feed_forward.pwff_layer.0.bias', 'encoder.layers.1.feed_forward.pwff_layer.0.weight', 'encoder.layers.1.feed_forward.pwff_layer.3.bias', 'encoder.layers.1.feed_forward.pwff_layer.3.weight', 'encoder.layers.1.layer_norm.bias', 'encoder.layers.1.layer_norm.weight', 'encoder.layers.1.src_src_att.k_layer.bias', 'encoder.layers.1.src_src_att.k_layer.weight', 'encoder.layers.1.src_src_att.output_layer.bias', 'encoder.layers.1.src_src_att.output_layer.weight', 'encoder.layers.1.src_src_att.q_layer.bias', 'encoder.layers.1.src_src_att.q_layer.weight', 'encoder.layers.1.src_src_att.v_layer.bias', 'encoder.layers.1.src_src_att.v_layer.weight', 'encoder.layers.2.feed_forward.layer_norm.bias', 'encoder.layers.2.feed_forward.layer_norm.weight', 'encoder.layers.2.feed_forward.pwff_layer.0.bias', 'encoder.layers.2.feed_forward.pwff_layer.0.weight', 'encoder.layers.2.feed_forward.pwff_layer.3.bias', 'encoder.layers.2.feed_forward.pwff_layer.3.weight', 'encoder.layers.2.layer_norm.bias', 'encoder.layers.2.layer_norm.weight', 'encoder.layers.2.src_src_att.k_layer.bias', 'encoder.layers.2.src_src_att.k_layer.weight', 'encoder.layers.2.src_src_att.output_layer.bias', 'encoder.layers.2.src_src_att.output_layer.weight', 'encoder.layers.2.src_src_att.q_layer.bias', 'encoder.layers.2.src_src_att.q_layer.weight', 'encoder.layers.2.src_src_att.v_layer.bias', 'encoder.layers.2.src_src_att.v_layer.weight', 'encoder.layers.3.feed_forward.layer_norm.bias', 'encoder.layers.3.feed_forward.layer_norm.weight', 'encoder.layers.3.feed_forward.pwff_layer.0.bias', 'encoder.layers.3.feed_forward.pwff_layer.0.weight', 'encoder.layers.3.feed_forward.pwff_layer.3.bias', 'encoder.layers.3.feed_forward.pwff_layer.3.weight', 'encoder.layers.3.layer_norm.bias', 'encoder.layers.3.layer_norm.weight', 'encoder.layers.3.src_src_att.k_layer.bias', 'encoder.layers.3.src_src_att.k_layer.weight', 'encoder.layers.3.src_src_att.output_layer.bias', 'encoder.layers.3.src_src_att.output_layer.weight', 'encoder.layers.3.src_src_att.q_layer.bias', 'encoder.layers.3.src_src_att.q_layer.weight', 'encoder.layers.3.src_src_att.v_layer.bias', 'encoder.layers.3.src_src_att.v_layer.weight', 'encoder.layers.4.feed_forward.layer_norm.bias', 'encoder.layers.4.feed_forward.layer_norm.weight', 'encoder.layers.4.feed_forward.pwff_layer.0.bias', 'encoder.layers.4.feed_forward.pwff_layer.0.weight', 'encoder.layers.4.feed_forward.pwff_layer.3.bias', 'encoder.layers.4.feed_forward.pwff_layer.3.weight', 'encoder.layers.4.layer_norm.bias', 'encoder.layers.4.layer_norm.weight', 'encoder.layers.4.src_src_att.k_layer.bias', 'encoder.layers.4.src_src_att.k_layer.weight', 'encoder.layers.4.src_src_att.output_layer.bias', 'encoder.layers.4.src_src_att.output_layer.weight', 'encoder.layers.4.src_src_att.q_layer.bias', 'encoder.layers.4.src_src_att.q_layer.weight', 'encoder.layers.4.src_src_att.v_layer.bias', 'encoder.layers.4.src_src_att.v_layer.weight', 'encoder.layers.5.feed_forward.layer_norm.bias', 'encoder.layers.5.feed_forward.layer_norm.weight', 'encoder.layers.5.feed_forward.pwff_layer.0.bias', 'encoder.layers.5.feed_forward.pwff_layer.0.weight', 'encoder.layers.5.feed_forward.pwff_layer.3.bias', 'encoder.layers.5.feed_forward.pwff_layer.3.weight', 'encoder.layers.5.layer_norm.bias', 'encoder.layers.5.layer_norm.weight', 'encoder.layers.5.src_src_att.k_layer.bias', 'encoder.layers.5.src_src_att.k_layer.weight', 'encoder.layers.5.src_src_att.output_layer.bias', 'encoder.layers.5.src_src_att.output_layer.weight', 'encoder.layers.5.src_src_att.q_layer.bias', 'encoder.layers.5.src_src_att.q_layer.weight', 'encoder.layers.5.src_src_att.v_layer.bias', 'encoder.layers.5.src_src_att.v_layer.weight', 'src_embed.lut.weight']
+2021-03-19 16:19:18,588 - INFO - joeynmt.helpers - cfg.name                           : mir.mires_transformer
+2021-03-19 16:19:18,588 - INFO - joeynmt.helpers - cfg.data.src                       : mir
+2021-03-19 16:19:18,588 - INFO - joeynmt.helpers - cfg.data.trg                       : es
+2021-03-19 16:19:18,588 - INFO - joeynmt.helpers - cfg.data.train                     : /data/joeynmt/mir.mires/train.bpe
+2021-03-19 16:19:18,588 - INFO - joeynmt.helpers - cfg.data.dev                       : /data/joeynmt/mir.mires/dev.bpe
+2021-03-19 16:19:18,588 - INFO - joeynmt.helpers - cfg.data.test                      : /data/joeynmt/mir.mires/test.bpe
+2021-03-19 16:19:18,588 - INFO - joeynmt.helpers - cfg.data.level                     : bpe
+2021-03-19 16:19:18,588 - INFO - joeynmt.helpers - cfg.data.lowercase                 : True
+2021-03-19 16:19:18,588 - INFO - joeynmt.helpers - cfg.data.max_sent_length           : 50
+2021-03-19 16:19:18,588 - INFO - joeynmt.helpers - cfg.data.src_vocab                 : /data/joeynmt/mir.mires/vocab.txt
+2021-03-19 16:19:18,588 - INFO - joeynmt.helpers - cfg.data.trg_vocab                 : /data/joeynmt/mir.mires/vocab.txt
+2021-03-19 16:19:18,588 - INFO - joeynmt.helpers - cfg.testing.beam_size              : 3
+2021-03-19 16:19:18,588 - INFO - joeynmt.helpers - cfg.testing.alpha                  : 1.0
+2021-03-19 16:19:18,588 - INFO - joeynmt.helpers - cfg.testing.postprocess            : True
+2021-03-19 16:19:18,588 - INFO - joeynmt.helpers - cfg.testing.bpe_type               : subword-nmt
+2021-03-19 16:19:18,588 - INFO - joeynmt.helpers - cfg.testing.sacrebleu.remove_whitespace : True
+2021-03-19 16:19:18,588 - INFO - joeynmt.helpers - cfg.testing.sacrebleu.tokenize     : 13a
+2021-03-19 16:19:18,588 - INFO - joeynmt.helpers - cfg.training.random_seed           : 42
+2021-03-19 16:19:18,588 - INFO - joeynmt.helpers - cfg.training.optimizer             : adam
+2021-03-19 16:19:18,588 - INFO - joeynmt.helpers - cfg.training.normalization         : tokens
+2021-03-19 16:19:18,588 - INFO - joeynmt.helpers - cfg.training.adam_betas            : [0.9, 0.999]
+2021-03-19 16:19:18,588 - INFO - joeynmt.helpers - cfg.training.scheduling            : plateau
+2021-03-19 16:19:18,589 - INFO - joeynmt.helpers - cfg.training.patience              : 5
+2021-03-19 16:19:18,589 - INFO - joeynmt.helpers - cfg.training.learning_rate_factor  : 0.5
+2021-03-19 16:19:18,589 - INFO - joeynmt.helpers - cfg.training.learning_rate_warmup  : 800
+2021-03-19 16:19:18,589 - INFO - joeynmt.helpers - cfg.training.decrease_factor       : 0.7
+2021-03-19 16:19:18,589 - INFO - joeynmt.helpers - cfg.training.loss                  : crossentropy
+2021-03-19 16:19:18,589 - INFO - joeynmt.helpers - cfg.training.learning_rate         : 0.0003
+2021-03-19 16:19:18,589 - INFO - joeynmt.helpers - cfg.training.learning_rate_min     : 1e-08
+2021-03-19 16:19:18,589 - INFO - joeynmt.helpers - cfg.training.weight_decay          : 0.0
+2021-03-19 16:19:18,589 - INFO - joeynmt.helpers - cfg.training.label_smoothing       : 0.1
+2021-03-19 16:19:18,589 - INFO - joeynmt.helpers - cfg.training.batch_size            : 128
+2021-03-19 16:19:18,589 - INFO - joeynmt.helpers - cfg.training.batch_type            : sentence
+2021-03-19 16:19:18,589 - INFO - joeynmt.helpers - cfg.training.eval_batch_size       : 256
+2021-03-19 16:19:18,589 - INFO - joeynmt.helpers - cfg.training.eval_batch_type       : sentence
+2021-03-19 16:19:18,589 - INFO - joeynmt.helpers - cfg.training.batch_multiplier      : 1
+2021-03-19 16:19:18,589 - INFO - joeynmt.helpers - cfg.training.early_stopping_metric : ppl
+2021-03-19 16:19:18,589 - INFO - joeynmt.helpers - cfg.training.epochs                : 100
+2021-03-19 16:19:18,589 - INFO - joeynmt.helpers - cfg.training.validation_freq       : 500
+2021-03-19 16:19:18,589 - INFO - joeynmt.helpers - cfg.training.logging_freq          : 1000
+2021-03-19 16:19:18,589 - INFO - joeynmt.helpers - cfg.training.eval_metric           : bleu
+2021-03-19 16:19:18,589 - INFO - joeynmt.helpers - cfg.training.model_dir             : models/alreves2
+2021-03-19 16:19:18,589 - INFO - joeynmt.helpers - cfg.training.overwrite             : False
+2021-03-19 16:19:18,589 - INFO - joeynmt.helpers - cfg.training.shuffle               : True
+2021-03-19 16:19:18,589 - INFO - joeynmt.helpers - cfg.training.use_cuda              : True
+2021-03-19 16:19:18,589 - INFO - joeynmt.helpers - cfg.training.max_output_length     : 50
+2021-03-19 16:19:18,589 - INFO - joeynmt.helpers - cfg.training.print_valid_sents     : [0, 1, 2, 3]
+2021-03-19 16:19:18,589 - INFO - joeynmt.helpers - cfg.training.keep_last_ckpts       : 3
+2021-03-19 16:19:18,589 - INFO - joeynmt.helpers - cfg.model.initializer              : xavier
+2021-03-19 16:19:18,589 - INFO - joeynmt.helpers - cfg.model.bias_initializer         : zeros
+2021-03-19 16:19:18,589 - INFO - joeynmt.helpers - cfg.model.init_gain                : 1.0
+2021-03-19 16:19:18,590 - INFO - joeynmt.helpers - cfg.model.embed_initializer        : xavier
+2021-03-19 16:19:18,590 - INFO - joeynmt.helpers - cfg.model.embed_init_gain          : 1.0
+2021-03-19 16:19:18,590 - INFO - joeynmt.helpers - cfg.model.tied_embeddings          : True
+2021-03-19 16:19:18,590 - INFO - joeynmt.helpers - cfg.model.tied_softmax             : True
+2021-03-19 16:19:18,590 - INFO - joeynmt.helpers - cfg.model.encoder.type             : transformer
+2021-03-19 16:19:18,590 - INFO - joeynmt.helpers - cfg.model.encoder.num_layers       : 6
+2021-03-19 16:19:18,590 - INFO - joeynmt.helpers - cfg.model.encoder.num_heads        : 4
+2021-03-19 16:19:18,590 - INFO - joeynmt.helpers - cfg.model.encoder.embeddings.embedding_dim : 256
+2021-03-19 16:19:18,590 - INFO - joeynmt.helpers - cfg.model.encoder.embeddings.scale : True
+2021-03-19 16:19:18,590 - INFO - joeynmt.helpers - cfg.model.encoder.embeddings.dropout : 0.2
+2021-03-19 16:19:18,590 - INFO - joeynmt.helpers - cfg.model.encoder.hidden_size      : 256
+2021-03-19 16:19:18,590 - INFO - joeynmt.helpers - cfg.model.encoder.ff_size          : 1024
+2021-03-19 16:19:18,590 - INFO - joeynmt.helpers - cfg.model.encoder.dropout          : 0.3
+2021-03-19 16:19:18,590 - INFO - joeynmt.helpers - cfg.model.decoder.type             : transformer
+2021-03-19 16:19:18,590 - INFO - joeynmt.helpers - cfg.model.decoder.num_layers       : 6
+2021-03-19 16:19:18,590 - INFO - joeynmt.helpers - cfg.model.decoder.num_heads        : 4
+2021-03-19 16:19:18,590 - INFO - joeynmt.helpers - cfg.model.decoder.embeddings.embedding_dim : 256
+2021-03-19 16:19:18,590 - INFO - joeynmt.helpers - cfg.model.decoder.embeddings.scale : True
+2021-03-19 16:19:18,590 - INFO - joeynmt.helpers - cfg.model.decoder.embeddings.dropout : 0.2
+2021-03-19 16:19:18,590 - INFO - joeynmt.helpers - cfg.model.decoder.hidden_size      : 256
+2021-03-19 16:19:18,590 - INFO - joeynmt.helpers - cfg.model.decoder.ff_size          : 1024
+2021-03-19 16:19:18,590 - INFO - joeynmt.helpers - cfg.model.decoder.dropout          : 0.3
+2021-03-19 16:19:18,590 - INFO - joeynmt.helpers - Data set sizes: 
+	train 4769,
+	valid 700,
+	test 912
+2021-03-19 16:19:18,590 - INFO - joeynmt.helpers - First training example:
+	[SRC] pero kyëꞌë gë@@ xpë jesus ja kixy uunk myaj@@ tsy, a nëm mëk nyëmaay kixy uunk@@ , ¡@@ pëd@@ ëꞌë@@ k@@ ! jantsy jujkpyë@@ jk ja kixy uunk@@ , mënityë pyë@@ dë@@ ꞌ@@ ky
+	[TRG] mas él, tom@@ ándo@@ la de la man@@ o, c@@ lam@@ ó diciendo much@@ a@@ ch@@ a, lev@@ án@@ ta@@ te
+2021-03-19 16:19:18,590 - INFO - joeynmt.helpers - First 10 words (src): (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ja (5) ajxy (6) de (7) a (8) y (9) la
+2021-03-19 16:19:18,591 - INFO - joeynmt.helpers - First 10 words (trg): (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ja (5) ajxy (6) de (7) a (8) y (9) la
+2021-03-19 16:19:18,591 - INFO - joeynmt.helpers - Number of Src words (types): 4057
+2021-03-19 16:19:18,591 - INFO - joeynmt.helpers - Number of Trg words (types): 4057
+2021-03-19 16:19:18,591 - INFO - joeynmt.training - Model(
+	encoder=TransformerEncoder(num_layers=6, num_heads=4),
+	decoder=TransformerDecoder(num_layers=6, num_heads=4),
+	src_embed=Embeddings(embedding_dim=256, vocab_size=4057),
+	trg_embed=Embeddings(embedding_dim=256, vocab_size=4057))
+2021-03-19 16:19:18,594 - INFO - joeynmt.training - Train stats:
+	device: cpu
+	n_gpu: 0
+	16-bits training: False
+	gradient accumulation: 1
+	batch size per device: 128
+	total batch size (w. parallel & accumulation): 128
+2021-03-19 16:19:18,594 - INFO - joeynmt.training - EPOCH 1
+2021-03-19 16:20:12,775 - INFO - joeynmt.training - Epoch   1: total training loss 231.40
+2021-03-19 16:20:12,775 - INFO - joeynmt.training - EPOCH 2
+2021-03-19 16:20:55,144 - INFO - joeynmt.training - Epoch   2: total training loss 208.24
+2021-03-19 16:20:55,144 - INFO - joeynmt.training - EPOCH 3
+2021-03-19 16:21:41,555 - INFO - joeynmt.training - Epoch   3: total training loss 206.35
+2021-03-19 16:21:41,555 - INFO - joeynmt.training - EPOCH 4
+2021-03-19 16:22:28,110 - INFO - joeynmt.training - Epoch   4: total training loss 204.27
+2021-03-19 16:22:28,116 - INFO - joeynmt.training - EPOCH 5
+2021-03-19 16:23:13,876 - INFO - joeynmt.training - Epoch   5: total training loss 202.41
+2021-03-19 16:23:13,876 - INFO - joeynmt.training - EPOCH 6
+2021-03-19 16:23:58,053 - INFO - joeynmt.training - Epoch   6: total training loss 200.77
+2021-03-19 16:23:58,054 - INFO - joeynmt.training - EPOCH 7
+2021-03-19 16:24:41,960 - INFO - joeynmt.training - Epoch   7: total training loss 198.92
+2021-03-19 16:24:41,960 - INFO - joeynmt.training - EPOCH 8
+2021-03-19 16:25:26,530 - INFO - joeynmt.training - Epoch   8: total training loss 197.02
+2021-03-19 16:25:26,530 - INFO - joeynmt.training - EPOCH 9
+2021-03-19 16:26:11,323 - INFO - joeynmt.training - Epoch   9: total training loss 194.62
+2021-03-19 16:26:11,326 - INFO - joeynmt.training - EPOCH 10
+2021-03-19 16:26:59,773 - INFO - joeynmt.training - Epoch  10: total training loss 192.46
+2021-03-19 16:26:59,774 - INFO - joeynmt.training - EPOCH 11
+2021-03-19 16:27:44,676 - INFO - joeynmt.training - Epoch  11: total training loss 190.68
+2021-03-19 16:27:44,676 - INFO - joeynmt.training - EPOCH 12
+2021-03-19 16:28:32,140 - INFO - joeynmt.training - Epoch  12: total training loss 187.97
+2021-03-19 16:28:32,140 - INFO - joeynmt.training - EPOCH 13
+2021-03-19 16:29:21,544 - INFO - joeynmt.training - Epoch  13: total training loss 182.96
+2021-03-19 16:29:21,547 - INFO - joeynmt.training - EPOCH 14
+2021-03-19 16:30:13,402 - INFO - joeynmt.training - Hooray! New best validation result [ppl]!
+2021-03-19 16:30:13,402 - INFO - joeynmt.training - Saving new checkpoint.
+2021-03-19 16:30:13,663 - INFO - joeynmt.training - Example #0
+2021-03-19 16:30:13,663 - DEBUG - joeynmt.training - 	Raw source:     ['yajtu@@', "yo'o@@", 'py', 'je', 'ajxy', 'jeky', 'aambyë']
+2021-03-19 16:30:13,663 - DEBUG - joeynmt.training - 	Raw hypothesis: ['el', 'es', 'es', 'es', 'es']
+2021-03-19 16:30:13,663 - INFO - joeynmt.training - 	Source:     yajtuyo'opy je ajxy jeky aambyë
+2021-03-19 16:30:13,663 - INFO - joeynmt.training - 	Reference:  promover el uso de las lenguas
+2021-03-19 16:30:13,663 - INFO - joeynmt.training - 	Hypothesis: el es es es es
+2021-03-19 16:30:13,663 - INFO - joeynmt.training - Example #1
+2021-03-19 16:30:13,663 - DEBUG - joeynmt.training - 	Raw source:     ['¿@@', 'neb@@', 'yëk', 'ty@@', 'ij@@', 'yë', 'david', 'ja', 'cristo', 'jeꞌe', 'duꞌun', 'yꞌa@@', 'p@@', 'ꞌaty', 'yꞌo@@', 'k@@', 'ꞌaty,', 'pë', 'david', 'ja', 'cristo', 'jëduꞌun', 'amdsoo', 'yaj@@', 'xë@@', 'ꞌajp', 'mëj', 'windsën@@', '?']
+2021-03-19 16:30:13,663 - DEBUG - joeynmt.training - 	Raw hypothesis: ['y', 'el', 'que', 'la', 'hombre', 'que', 'la', 'hombre', 'que', 'la', 'hombre', 'que', 'la', 'hombre', 'que', 'la', 'hombre']
+2021-03-19 16:30:13,663 - INFO - joeynmt.training - 	Source:     ¿nebyëk tyijyë david ja cristo jeꞌe duꞌun yꞌapꞌaty yꞌokꞌaty, pë david ja cristo jëduꞌun amdsoo yajxëꞌajp mëj windsën?
+2021-03-19 16:30:13,663 - INFO - joeynmt.training - 	Reference:  pues si david le llama señor, ¿cómo es su hijo?
+2021-03-19 16:30:13,663 - INFO - joeynmt.training - 	Hypothesis: y el que la hombre que la hombre que la hombre que la hombre que la hombre
+2021-03-19 16:30:13,663 - INFO - joeynmt.training - Example #2
+2021-03-19 16:30:13,663 - DEBUG - joeynmt.training - 	Raw source:     ['¿@@', 'mënaa', 'ja', 'juan', 'tëë', 'tyun@@', 'k@@', 'mëëd@@', 'a@@', 'ty@@', '?']
+2021-03-19 16:30:13,663 - DEBUG - joeynmt.training - 	Raw hypothesis: ['el', 'que', 'el', 'que', 'el', 'hombre']
+2021-03-19 16:30:13,663 - INFO - joeynmt.training - 	Source:     ¿mënaa ja juan tëë tyunkmëëdaty?
+2021-03-19 16:30:13,664 - INFO - joeynmt.training - 	Reference:  ¿cuándo fue autoridad juan?
+2021-03-19 16:30:13,664 - INFO - joeynmt.training - 	Hypothesis: el que el que el hombre
+2021-03-19 16:30:13,664 - INFO - joeynmt.training - Example #3
+2021-03-19 16:30:13,664 - DEBUG - joeynmt.training - 	Raw source:     ['ix', 'pën', 'jaty', 'në@@', 'myëj@@', 'jaantsy@@', 'pëd@@', 'aa@@', 'kë@@', 'p,', 'ts@@', 'yuuk', 'pëdaꞌa@@', 'g@@', 'anëp', 'jeꞌe', 'a', 'pën', 'në@@', 'tsyu@@', 'uk@@', 'pëd@@', 'aa@@', 'kë@@', 'p,', 'jeꞌejëts', 'mëj', 'jaantsy', 'pëdaꞌa@@', 'g@@', 'anëp']
+2021-03-19 16:30:13,664 - DEBUG - joeynmt.training - 	Raw hypothesis: ['y', 'el', 'que', 'la', 'que', 'la', 'hombre', 'que', 'la', 'que', 'la', 'que', 'la', 'que', 'la', 'que', 'la', 'hombre', 'que', 'la', 'que', 'la', 'que', 'la', 'hombre', 'que', 'la', 'hombre']
+2021-03-19 16:30:13,664 - INFO - joeynmt.training - 	Source:     ix pën jaty nëmyëjjaantsypëdaakëp, tsyuuk pëdaꞌaganëp jeꞌe a pën nëtsyuukpëdaakëp, jeꞌejëts mëj jaantsy pëdaꞌaganëp
+2021-03-19 16:30:13,664 - INFO - joeynmt.training - 	Reference:  porque cualquiera que se enaltece, será humillado y el que se humilla, será enaltecido
+2021-03-19 16:30:13,664 - INFO - joeynmt.training - 	Hypothesis: y el que la que la hombre que la que la que la que la que la hombre que la que la que la hombre que la hombre
+2021-03-19 16:30:13,664 - INFO - joeynmt.training - Validation result (greedy) at epoch  14, step      500: bleu:   0.30, loss: 96725.8594, ppl: 161.9607, duration: 47.3883s
+2021-03-19 16:30:53,963 - INFO - joeynmt.training - Epoch  14: total training loss 180.04
+2021-03-19 16:30:53,963 - INFO - joeynmt.training - EPOCH 15
+2021-03-19 16:31:41,082 - INFO - joeynmt.training - Epoch  15: total training loss 177.81
+2021-03-19 16:31:41,083 - INFO - joeynmt.training - EPOCH 16
+2021-03-19 16:32:29,275 - INFO - joeynmt.training - Epoch  16: total training loss 175.30
+2021-03-19 16:32:29,276 - INFO - joeynmt.training - EPOCH 17
+2021-03-19 16:33:18,345 - INFO - joeynmt.training - Epoch  17: total training loss 174.30
+2021-03-19 16:33:18,346 - INFO - joeynmt.training - EPOCH 18
+2021-03-19 16:34:08,659 - INFO - joeynmt.training - Epoch  18: total training loss 173.38
+2021-03-19 16:34:08,659 - INFO - joeynmt.training - EPOCH 19
+2021-03-19 16:34:55,880 - INFO - joeynmt.training - Epoch  19: total training loss 171.01
+2021-03-19 16:34:55,880 - INFO - joeynmt.training - EPOCH 20
+2021-03-19 16:35:45,524 - INFO - joeynmt.training - Epoch  20: total training loss 168.65
+2021-03-19 16:35:45,525 - INFO - joeynmt.training - EPOCH 21
+2021-03-19 16:36:35,829 - INFO - joeynmt.training - Epoch  21: total training loss 165.88
+2021-03-19 16:36:35,830 - INFO - joeynmt.training - EPOCH 22
+2021-03-19 16:37:24,914 - INFO - joeynmt.training - Epoch  22: total training loss 164.10
+2021-03-19 16:37:24,914 - INFO - joeynmt.training - EPOCH 23
+2021-03-19 16:38:12,936 - INFO - joeynmt.training - Epoch  23: total training loss 162.97
+2021-03-19 16:38:12,936 - INFO - joeynmt.training - EPOCH 24
+2021-03-19 16:39:02,053 - INFO - joeynmt.training - Epoch  24: total training loss 160.59
+2021-03-19 16:39:02,054 - INFO - joeynmt.training - EPOCH 25
+2021-03-19 16:39:38,434 - INFO - joeynmt.training - Epoch  25: total training loss 158.22
+2021-03-19 16:39:38,436 - INFO - joeynmt.training - EPOCH 26
+2021-03-19 16:40:25,373 - INFO - joeynmt.training - Epoch  26: total training loss 156.04
+2021-03-19 16:40:25,374 - INFO - joeynmt.training - EPOCH 27
+2021-03-19 16:40:38,090 - INFO - joeynmt.training - Epoch  27, Step:     1000, Batch Loss:     4.389015, Tokens per Sec:     1833, Lr: 0.000300
+2021-03-19 16:41:33,658 - INFO - joeynmt.training - Hooray! New best validation result [ppl]!
+2021-03-19 16:41:33,659 - INFO - joeynmt.training - Saving new checkpoint.
+2021-03-19 16:41:33,964 - INFO - joeynmt.training - Example #0
+2021-03-19 16:41:33,964 - DEBUG - joeynmt.training - 	Raw source:     ['yajtu@@', "yo'o@@", 'py', 'je', 'ajxy', 'jeky', 'aambyë']
+2021-03-19 16:41:33,964 - DEBUG - joeynmt.training - 	Raw hypothesis: ['el', 'conejo', 'se', 'se', 'se', 'se', 'se', 'se', 'se', 'se', 'se', 'se', 'se', 'se', 'se', 'se', 'se', 'se', 'se', 'se', 'se', 'se', 'se', 'se', 'se', 'se', 'se', 'se', 'se', 'se', 'se', 'se', 'se', 'se', 'se', 'se', 'se', 'se', 'se', 'se', 'se', 'se', 'se', 'se']
+2021-03-19 16:41:33,964 - INFO - joeynmt.training - 	Source:     yajtuyo'opy je ajxy jeky aambyë
+2021-03-19 16:41:33,964 - INFO - joeynmt.training - 	Reference:  promover el uso de las lenguas
+2021-03-19 16:41:33,964 - INFO - joeynmt.training - 	Hypothesis: el conejo se se se se se se se se se se se se se se se se se se se se se se se se se se se se se se se se se se se se se se se se se se
+2021-03-19 16:41:33,965 - INFO - joeynmt.training - Example #1
+2021-03-19 16:41:33,965 - DEBUG - joeynmt.training - 	Raw source:     ['¿@@', 'neb@@', 'yëk', 'ty@@', 'ij@@', 'yë', 'david', 'ja', 'cristo', 'jeꞌe', 'duꞌun', 'yꞌa@@', 'p@@', 'ꞌaty', 'yꞌo@@', 'k@@', 'ꞌaty,', 'pë', 'david', 'ja', 'cristo', 'jëduꞌun', 'amdsoo', 'yaj@@', 'xë@@', 'ꞌajp', 'mëj', 'windsën@@', '?']
+2021-03-19 16:41:33,965 - DEBUG - joeynmt.training - 	Raw hypothesis: ['¿@@', 'es', 'el', 'que', 'es', 'que', 'me', 'es', 'que', 'es', 'que', 'es', 'que', 'me', 'es', 'el', 'que', 'me', 'es', 'que', 'me', 'es', 'el', 'que', 'me', 'es', 'es', 'que', 'me', 'es', 'el', 'que', 'me', 'es', 'el', 'hombre', 'es', 'es', 'es', 'es', 'es', 'es', 'mi', 'hijo', 'de', 'la', 'casa']
+2021-03-19 16:41:33,965 - INFO - joeynmt.training - 	Source:     ¿nebyëk tyijyë david ja cristo jeꞌe duꞌun yꞌapꞌaty yꞌokꞌaty, pë david ja cristo jëduꞌun amdsoo yajxëꞌajp mëj windsën?
+2021-03-19 16:41:33,965 - INFO - joeynmt.training - 	Reference:  pues si david le llama señor, ¿cómo es su hijo?
+2021-03-19 16:41:33,965 - INFO - joeynmt.training - 	Hypothesis: ¿es el que es que me es que es que es que me es el que me es que me es el que me es es que me es el que me es el hombre es es es es es es mi hijo de la casa
+2021-03-19 16:41:33,965 - INFO - joeynmt.training - Example #2
+2021-03-19 16:41:33,965 - DEBUG - joeynmt.training - 	Raw source:     ['¿@@', 'mënaa', 'ja', 'juan', 'tëë', 'tyun@@', 'k@@', 'mëëd@@', 'a@@', 'ty@@', '?']
+2021-03-19 16:41:33,965 - DEBUG - joeynmt.training - 	Raw hypothesis: ['¿@@', 'me', 'me', 'me', 'el', 'que', 'me', 'me', 'me', 'me', 'me', 'me', 'me', 'me', 'me', 'me', 'me', 'me', 'me', 'me', 'me', 'es', 'tu', '?']
+2021-03-19 16:41:33,965 - INFO - joeynmt.training - 	Source:     ¿mënaa ja juan tëë tyunkmëëdaty?
+2021-03-19 16:41:33,965 - INFO - joeynmt.training - 	Reference:  ¿cuándo fue autoridad juan?
+2021-03-19 16:41:33,965 - INFO - joeynmt.training - 	Hypothesis: ¿me me me el que me me me me me me me me me me me me me me me es tu ?
+2021-03-19 16:41:33,965 - INFO - joeynmt.training - Example #3
+2021-03-19 16:41:33,965 - DEBUG - joeynmt.training - 	Raw source:     ['ix', 'pën', 'jaty', 'në@@', 'myëj@@', 'jaantsy@@', 'pëd@@', 'aa@@', 'kë@@', 'p,', 'ts@@', 'yuuk', 'pëdaꞌa@@', 'g@@', 'anëp', 'jeꞌe', 'a', 'pën', 'në@@', 'tsyu@@', 'uk@@', 'pëd@@', 'aa@@', 'kë@@', 'p,', 'jeꞌejëts', 'mëj', 'jaantsy', 'pëdaꞌa@@', 'g@@', 'anëp']
+2021-03-19 16:41:33,965 - DEBUG - joeynmt.training - 	Raw hypothesis: ['y', 'el', 'que', 'no', 'es', 'que', 'no', 'es', 'que', 'no', 'es', 'que', 'no', 'es', 'que', 'no', 'es', 'el', 'que', 'no', 'es', 'es', 'es', 'es', 'es', 'que', 'no', 'es', 'es', 'que', 'me', 'es', 'el', 'hombre', 'es', 'el', 'hombre']
+2021-03-19 16:41:33,965 - INFO - joeynmt.training - 	Source:     ix pën jaty nëmyëjjaantsypëdaakëp, tsyuuk pëdaꞌaganëp jeꞌe a pën nëtsyuukpëdaakëp, jeꞌejëts mëj jaantsy pëdaꞌaganëp
+2021-03-19 16:41:33,965 - INFO - joeynmt.training - 	Reference:  porque cualquiera que se enaltece, será humillado y el que se humilla, será enaltecido
+2021-03-19 16:41:33,965 - INFO - joeynmt.training - 	Hypothesis: y el que no es que no es que no es que no es que no es el que no es es es es es que no es es que me es el hombre es el hombre
+2021-03-19 16:41:33,965 - INFO - joeynmt.training - Validation result (greedy) at epoch  27, step     1000: bleu:   0.36, loss: 88356.4219, ppl: 104.2882, duration: 55.8746s
+2021-03-19 16:42:10,691 - INFO - joeynmt.training - Epoch  27: total training loss 154.06
+2021-03-19 16:42:10,692 - INFO - joeynmt.training - EPOCH 28
+2021-03-19 16:43:00,954 - INFO - joeynmt.training - Epoch  28: total training loss 152.34
+2021-03-19 16:43:00,954 - INFO - joeynmt.training - EPOCH 29
+2021-03-19 16:43:49,048 - INFO - joeynmt.training - Epoch  29: total training loss 149.96
+2021-03-19 16:43:49,048 - INFO - joeynmt.training - EPOCH 30
+2021-03-19 16:44:29,727 - INFO - joeynmt.training - Epoch  30: total training loss 148.19
+2021-03-19 16:44:29,729 - INFO - joeynmt.training - EPOCH 31
+2021-03-19 16:45:18,163 - INFO - joeynmt.training - Epoch  31: total training loss 146.28
+2021-03-19 16:45:18,164 - INFO - joeynmt.training - EPOCH 32
+2021-03-19 16:46:08,303 - INFO - joeynmt.training - Epoch  32: total training loss 144.01
+2021-03-19 16:46:08,305 - INFO - joeynmt.training - EPOCH 33
+2021-03-19 16:46:53,929 - INFO - joeynmt.training - Epoch  33: total training loss 141.89
+2021-03-19 16:46:53,929 - INFO - joeynmt.training - EPOCH 34
+2021-03-19 16:47:38,614 - INFO - joeynmt.training - Epoch  34: total training loss 140.61
+2021-03-19 16:47:38,614 - INFO - joeynmt.training - EPOCH 35
+2021-03-19 16:48:22,171 - INFO - joeynmt.training - Epoch  35: total training loss 138.42
+2021-03-19 16:48:22,171 - INFO - joeynmt.training - EPOCH 36
+2021-03-19 16:49:09,656 - INFO - joeynmt.training - Epoch  36: total training loss 137.61
+2021-03-19 16:49:09,656 - INFO - joeynmt.training - EPOCH 37
+2021-03-19 16:49:59,151 - INFO - joeynmt.training - Epoch  37: total training loss 135.13
+2021-03-19 16:49:59,151 - INFO - joeynmt.training - EPOCH 38
+2021-03-19 16:50:50,113 - INFO - joeynmt.training - Epoch  38: total training loss 132.82
+2021-03-19 16:50:50,113 - INFO - joeynmt.training - EPOCH 39
+2021-03-19 16:51:31,840 - INFO - joeynmt.training - Epoch  39: total training loss 130.78
+2021-03-19 16:51:31,840 - INFO - joeynmt.training - EPOCH 40
+2021-03-19 16:52:58,399 - INFO - joeynmt.training - Hooray! New best validation result [ppl]!
+2021-03-19 16:52:58,400 - INFO - joeynmt.training - Saving new checkpoint.
+2021-03-19 16:52:58,921 - INFO - joeynmt.training - Example #0
+2021-03-19 16:52:58,921 - DEBUG - joeynmt.training - 	Raw source:     ['yajtu@@', "yo'o@@", 'py', 'je', 'ajxy', 'jeky', 'aambyë']
+2021-03-19 16:52:58,921 - DEBUG - joeynmt.training - 	Raw hypothesis: ['los', 'me@@', 't@@', 'ados', 'de', 'los', 'l@@', 'ac@@', 'os']
+2021-03-19 16:52:58,921 - INFO - joeynmt.training - 	Source:     yajtuyo'opy je ajxy jeky aambyë
+2021-03-19 16:52:58,921 - INFO - joeynmt.training - 	Reference:  promover el uso de las lenguas
+2021-03-19 16:52:58,922 - INFO - joeynmt.training - 	Hypothesis: los metados de los lacos
+2021-03-19 16:52:58,922 - INFO - joeynmt.training - Example #1
+2021-03-19 16:52:58,922 - DEBUG - joeynmt.training - 	Raw source:     ['¿@@', 'neb@@', 'yëk', 'ty@@', 'ij@@', 'yë', 'david', 'ja', 'cristo', 'jeꞌe', 'duꞌun', 'yꞌa@@', 'p@@', 'ꞌaty', 'yꞌo@@', 'k@@', 'ꞌaty,', 'pë', 'david', 'ja', 'cristo', 'jëduꞌun', 'amdsoo', 'yaj@@', 'xë@@', 'ꞌajp', 'mëj', 'windsën@@', '?']
+2021-03-19 16:52:58,922 - DEBUG - joeynmt.training - 	Raw hypothesis: ['¿@@', 'es', 'el', 'que', 'es', 'necesario', 'que', 'es', 'necesario', 'que', 'es', 'el', 'que', 'es', 'el', 'que', 'es', 'el', 'que', 'es', 'de', 'la', 'al@@', '?']
+2021-03-19 16:52:58,922 - INFO - joeynmt.training - 	Source:     ¿nebyëk tyijyë david ja cristo jeꞌe duꞌun yꞌapꞌaty yꞌokꞌaty, pë david ja cristo jëduꞌun amdsoo yajxëꞌajp mëj windsën?
+2021-03-19 16:52:58,922 - INFO - joeynmt.training - 	Reference:  pues si david le llama señor, ¿cómo es su hijo?
+2021-03-19 16:52:58,922 - INFO - joeynmt.training - 	Hypothesis: ¿es el que es necesario que es necesario que es el que es el que es el que es de la al?
+2021-03-19 16:52:58,922 - INFO - joeynmt.training - Example #2
+2021-03-19 16:52:58,922 - DEBUG - joeynmt.training - 	Raw source:     ['¿@@', 'mënaa', 'ja', 'juan', 'tëë', 'tyun@@', 'k@@', 'mëëd@@', 'a@@', 'ty@@', '?']
+2021-03-19 16:52:58,922 - DEBUG - joeynmt.training - 	Raw hypothesis: ['¿@@', 'está', 'en', 'el', 'co@@', 'st@@', 'ado', 'de', 'la', 'ol@@', '?']
+2021-03-19 16:52:58,922 - INFO - joeynmt.training - 	Source:     ¿mënaa ja juan tëë tyunkmëëdaty?
+2021-03-19 16:52:58,922 - INFO - joeynmt.training - 	Reference:  ¿cuándo fue autoridad juan?
+2021-03-19 16:52:58,922 - INFO - joeynmt.training - 	Hypothesis: ¿está en el costado de la ol?
+2021-03-19 16:52:58,922 - INFO - joeynmt.training - Example #3
+2021-03-19 16:52:58,922 - DEBUG - joeynmt.training - 	Raw source:     ['ix', 'pën', 'jaty', 'në@@', 'myëj@@', 'jaantsy@@', 'pëd@@', 'aa@@', 'kë@@', 'p,', 'ts@@', 'yuuk', 'pëdaꞌa@@', 'g@@', 'anëp', 'jeꞌe', 'a', 'pën', 'në@@', 'tsyu@@', 'uk@@', 'pëd@@', 'aa@@', 'kë@@', 'p,', 'jeꞌejëts', 'mëj', 'jaantsy', 'pëdaꞌa@@', 'g@@', 'anëp']
+2021-03-19 16:52:58,922 - DEBUG - joeynmt.training - 	Raw hypothesis: ['porque', 'si', 'no', 'me', 'llam@@', 'ó', 'a', 'mí', 'a', 'mí', 'no', 'me', 'ha', 'hecho']
+2021-03-19 16:52:58,922 - INFO - joeynmt.training - 	Source:     ix pën jaty nëmyëjjaantsypëdaakëp, tsyuuk pëdaꞌaganëp jeꞌe a pën nëtsyuukpëdaakëp, jeꞌejëts mëj jaantsy pëdaꞌaganëp
+2021-03-19 16:52:58,922 - INFO - joeynmt.training - 	Reference:  porque cualquiera que se enaltece, será humillado y el que se humilla, será enaltecido
+2021-03-19 16:52:58,922 - INFO - joeynmt.training - 	Hypothesis: porque si no me llamó a mí a mí no me ha hecho
+2021-03-19 16:52:58,922 - INFO - joeynmt.training - Validation result (greedy) at epoch  40, step     1500: bleu:   1.30, loss: 82591.0312, ppl:  77.0091, duration: 64.3605s
+2021-03-19 16:53:26,665 - INFO - joeynmt.training - Epoch  40: total training loss 129.16
+2021-03-19 16:53:26,666 - INFO - joeynmt.training - EPOCH 41
+2021-03-19 16:54:14,158 - INFO - joeynmt.training - Epoch  41: total training loss 127.76
+2021-03-19 16:54:14,159 - INFO - joeynmt.training - EPOCH 42
+2021-03-19 16:55:02,017 - INFO - joeynmt.training - Epoch  42: total training loss 126.19
+2021-03-19 16:55:02,020 - INFO - joeynmt.training - EPOCH 43
+2021-03-19 16:55:42,953 - INFO - joeynmt.training - Epoch  43: total training loss 124.71
+2021-03-19 16:55:42,954 - INFO - joeynmt.training - EPOCH 44
+2021-03-19 16:56:30,184 - INFO - joeynmt.training - Epoch  44: total training loss 123.14
+2021-03-19 16:56:30,185 - INFO - joeynmt.training - EPOCH 45
+2021-03-19 16:57:16,802 - INFO - joeynmt.training - Epoch  45: total training loss 122.15
+2021-03-19 16:57:16,802 - INFO - joeynmt.training - EPOCH 46
+2021-03-19 16:58:05,808 - INFO - joeynmt.training - Epoch  46: total training loss 120.00
+2021-03-19 16:58:05,808 - INFO - joeynmt.training - EPOCH 47
+2021-03-19 16:58:53,702 - INFO - joeynmt.training - Epoch  47: total training loss 118.13
+2021-03-19 16:58:53,703 - INFO - joeynmt.training - EPOCH 48
+2021-03-19 16:59:34,299 - INFO - joeynmt.training - Epoch  48: total training loss 116.10
+2021-03-19 16:59:34,300 - INFO - joeynmt.training - EPOCH 49
+2021-03-19 17:00:22,716 - INFO - joeynmt.training - Epoch  49: total training loss 114.86
+2021-03-19 17:00:22,716 - INFO - joeynmt.training - EPOCH 50
+2021-03-19 17:01:13,028 - INFO - joeynmt.training - Epoch  50: total training loss 113.04
+2021-03-19 17:01:13,028 - INFO - joeynmt.training - EPOCH 51
+2021-03-19 17:02:01,673 - INFO - joeynmt.training - Epoch  51: total training loss 111.56
+2021-03-19 17:02:01,673 - INFO - joeynmt.training - EPOCH 52
+2021-03-19 17:02:50,996 - INFO - joeynmt.training - Epoch  52: total training loss 110.73
+2021-03-19 17:02:50,996 - INFO - joeynmt.training - EPOCH 53
+2021-03-19 17:03:25,087 - INFO - joeynmt.training - Epoch  53, Step:     2000, Batch Loss:     3.141454, Tokens per Sec:     1627, Lr: 0.000300
+2021-03-19 17:04:22,629 - INFO - joeynmt.training - Hooray! New best validation result [ppl]!
+2021-03-19 17:04:22,630 - INFO - joeynmt.training - Saving new checkpoint.
+2021-03-19 17:04:22,888 - INFO - joeynmt.training - Example #0
+2021-03-19 17:04:22,888 - DEBUG - joeynmt.training - 	Raw source:     ['yajtu@@', "yo'o@@", 'py', 'je', 'ajxy', 'jeky', 'aambyë']
+2021-03-19 17:04:22,888 - DEBUG - joeynmt.training - 	Raw hypothesis: ['ten@@', 'emos', 's@@', 'omb@@', 'r@@', 'entes']
+2021-03-19 17:04:22,888 - INFO - joeynmt.training - 	Source:     yajtuyo'opy je ajxy jeky aambyë
+2021-03-19 17:04:22,888 - INFO - joeynmt.training - 	Reference:  promover el uso de las lenguas
+2021-03-19 17:04:22,888 - INFO - joeynmt.training - 	Hypothesis: tenemos sombrentes
+2021-03-19 17:04:22,888 - INFO - joeynmt.training - Example #1
+2021-03-19 17:04:22,888 - DEBUG - joeynmt.training - 	Raw source:     ['¿@@', 'neb@@', 'yëk', 'ty@@', 'ij@@', 'yë', 'david', 'ja', 'cristo', 'jeꞌe', 'duꞌun', 'yꞌa@@', 'p@@', 'ꞌaty', 'yꞌo@@', 'k@@', 'ꞌaty,', 'pë', 'david', 'ja', 'cristo', 'jëduꞌun', 'amdsoo', 'yaj@@', 'xë@@', 'ꞌajp', 'mëj', 'windsën@@', '?']
+2021-03-19 17:04:22,888 - DEBUG - joeynmt.training - 	Raw hypothesis: ['¿@@', 'acaso', 'es', 'el', 'que', 'es', 'de', 'la', 'al@@', '?']
+2021-03-19 17:04:22,888 - INFO - joeynmt.training - 	Source:     ¿nebyëk tyijyë david ja cristo jeꞌe duꞌun yꞌapꞌaty yꞌokꞌaty, pë david ja cristo jëduꞌun amdsoo yajxëꞌajp mëj windsën?
+2021-03-19 17:04:22,888 - INFO - joeynmt.training - 	Reference:  pues si david le llama señor, ¿cómo es su hijo?
+2021-03-19 17:04:22,888 - INFO - joeynmt.training - 	Hypothesis: ¿acaso es el que es de la al?
+2021-03-19 17:04:22,888 - INFO - joeynmt.training - Example #2
+2021-03-19 17:04:22,888 - DEBUG - joeynmt.training - 	Raw source:     ['¿@@', 'mënaa', 'ja', 'juan', 'tëë', 'tyun@@', 'k@@', 'mëëd@@', 'a@@', 'ty@@', '?']
+2021-03-19 17:04:22,888 - DEBUG - joeynmt.training - 	Raw hypothesis: ['¿@@', 'que', 'está', 'sentado', 'la', 'puerta', 'de', 'juan', 'se', 'fue', 'con', 'juan']
+2021-03-19 17:04:22,889 - INFO - joeynmt.training - 	Source:     ¿mënaa ja juan tëë tyunkmëëdaty?
+2021-03-19 17:04:22,889 - INFO - joeynmt.training - 	Reference:  ¿cuándo fue autoridad juan?
+2021-03-19 17:04:22,889 - INFO - joeynmt.training - 	Hypothesis: ¿que está sentado la puerta de juan se fue con juan
+2021-03-19 17:04:22,889 - INFO - joeynmt.training - Example #3
+2021-03-19 17:04:22,889 - DEBUG - joeynmt.training - 	Raw source:     ['ix', 'pën', 'jaty', 'në@@', 'myëj@@', 'jaantsy@@', 'pëd@@', 'aa@@', 'kë@@', 'p,', 'ts@@', 'yuuk', 'pëdaꞌa@@', 'g@@', 'anëp', 'jeꞌe', 'a', 'pën', 'në@@', 'tsyu@@', 'uk@@', 'pëd@@', 'aa@@', 'kë@@', 'p,', 'jeꞌejëts', 'mëj', 'jaantsy', 'pëdaꞌa@@', 'g@@', 'anëp']
+2021-03-19 17:04:22,889 - DEBUG - joeynmt.training - 	Raw hypothesis: ['pero', 'él', 'dijo', 'a', 'mí', 'no', 'me', 'ha', 'hecho', 'el', 'que', 'me', 'ha', 'hecho']
+2021-03-19 17:04:22,889 - INFO - joeynmt.training - 	Source:     ix pën jaty nëmyëjjaantsypëdaakëp, tsyuuk pëdaꞌaganëp jeꞌe a pën nëtsyuukpëdaakëp, jeꞌejëts mëj jaantsy pëdaꞌaganëp
+2021-03-19 17:04:22,889 - INFO - joeynmt.training - 	Reference:  porque cualquiera que se enaltece, será humillado y el que se humilla, será enaltecido
+2021-03-19 17:04:22,889 - INFO - joeynmt.training - 	Hypothesis: pero él dijo a mí no me ha hecho el que me ha hecho
+2021-03-19 17:04:22,889 - INFO - joeynmt.training - Validation result (greedy) at epoch  53, step     2000: bleu:   1.66, loss: 80454.1641, ppl:  68.8228, duration: 57.8019s
+2021-03-19 17:04:40,413 - INFO - joeynmt.training - Epoch  53: total training loss 108.98
+2021-03-19 17:04:40,414 - INFO - joeynmt.training - EPOCH 54
+2021-03-19 17:05:29,624 - INFO - joeynmt.training - Epoch  54: total training loss 107.53
+2021-03-19 17:05:29,624 - INFO - joeynmt.training - EPOCH 55
+2021-03-19 17:06:20,169 - INFO - joeynmt.training - Epoch  55: total training loss 106.60
+2021-03-19 17:06:20,172 - INFO - joeynmt.training - EPOCH 56
+2021-03-19 17:07:08,262 - INFO - joeynmt.training - Epoch  56: total training loss 104.73
+2021-03-19 17:07:08,262 - INFO - joeynmt.training - EPOCH 57
+2021-03-19 17:07:54,455 - INFO - joeynmt.training - Epoch  57: total training loss 103.77
+2021-03-19 17:07:54,456 - INFO - joeynmt.training - EPOCH 58
+2021-03-19 17:08:36,011 - INFO - joeynmt.training - Epoch  58: total training loss 102.52
+2021-03-19 17:08:36,011 - INFO - joeynmt.training - EPOCH 59
+2021-03-19 17:09:30,007 - INFO - joeynmt.training - Epoch  59: total training loss 100.95
+2021-03-19 17:09:30,007 - INFO - joeynmt.training - EPOCH 60
+2021-03-19 17:10:24,336 - INFO - joeynmt.training - Epoch  60: total training loss 99.44
+2021-03-19 17:10:24,336 - INFO - joeynmt.training - EPOCH 61
+2021-03-19 17:11:15,782 - INFO - joeynmt.training - Epoch  61: total training loss 98.14
+2021-03-19 17:11:15,782 - INFO - joeynmt.training - EPOCH 62
+2021-03-19 17:12:09,226 - INFO - joeynmt.training - Epoch  62: total training loss 97.63
+2021-03-19 17:12:09,226 - INFO - joeynmt.training - EPOCH 63
+2021-03-19 17:13:00,903 - INFO - joeynmt.training - Epoch  63: total training loss 96.29
+2021-03-19 17:13:00,903 - INFO - joeynmt.training - EPOCH 64
+2021-03-19 17:13:40,653 - INFO - joeynmt.training - Epoch  64: total training loss 94.40
+2021-03-19 17:13:40,653 - INFO - joeynmt.training - EPOCH 65
+2021-03-19 17:14:28,298 - INFO - joeynmt.training - Epoch  65: total training loss 93.24
+2021-03-19 17:14:28,299 - INFO - joeynmt.training - EPOCH 66
+2021-03-19 17:16:06,172 - INFO - joeynmt.training - Example #0
+2021-03-19 17:16:06,173 - DEBUG - joeynmt.training - 	Raw source:     ['yajtu@@', "yo'o@@", 'py', 'je', 'ajxy', 'jeky', 'aambyë']
+2021-03-19 17:16:06,173 - DEBUG - joeynmt.training - 	Raw hypothesis: ['in@@', 'ú@@', 'b@@', 'anos', 'de', 'la', 'federación']
+2021-03-19 17:16:06,173 - INFO - joeynmt.training - 	Source:     yajtuyo'opy je ajxy jeky aambyë
+2021-03-19 17:16:06,173 - INFO - joeynmt.training - 	Reference:  promover el uso de las lenguas
+2021-03-19 17:16:06,173 - INFO - joeynmt.training - 	Hypothesis: inúbanos de la federación
+2021-03-19 17:16:06,173 - INFO - joeynmt.training - Example #1
+2021-03-19 17:16:06,173 - DEBUG - joeynmt.training - 	Raw source:     ['¿@@', 'neb@@', 'yëk', 'ty@@', 'ij@@', 'yë', 'david', 'ja', 'cristo', 'jeꞌe', 'duꞌun', 'yꞌa@@', 'p@@', 'ꞌaty', 'yꞌo@@', 'k@@', 'ꞌaty,', 'pë', 'david', 'ja', 'cristo', 'jëduꞌun', 'amdsoo', 'yaj@@', 'xë@@', 'ꞌajp', 'mëj', 'windsën@@', '?']
+2021-03-19 17:16:06,173 - DEBUG - joeynmt.training - 	Raw hypothesis: ['¿@@', 'acaso', 'es', 'el', 'que', 'es', 'necesario', 'que', 'es', 'necesario', 'que', 'es', 'necesario', 'que', 'es', 'necesario', 'que', 'la', 'al@@', 'de@@', '?']
+2021-03-19 17:16:06,173 - INFO - joeynmt.training - 	Source:     ¿nebyëk tyijyë david ja cristo jeꞌe duꞌun yꞌapꞌaty yꞌokꞌaty, pë david ja cristo jëduꞌun amdsoo yajxëꞌajp mëj windsën?
+2021-03-19 17:16:06,173 - INFO - joeynmt.training - 	Reference:  pues si david le llama señor, ¿cómo es su hijo?
+2021-03-19 17:16:06,173 - INFO - joeynmt.training - 	Hypothesis: ¿acaso es el que es necesario que es necesario que es necesario que es necesario que la alde?
+2021-03-19 17:16:06,173 - INFO - joeynmt.training - Example #2
+2021-03-19 17:16:06,173 - DEBUG - joeynmt.training - 	Raw source:     ['¿@@', 'mënaa', 'ja', 'juan', 'tëë', 'tyun@@', 'k@@', 'mëëd@@', 'a@@', 'ty@@', '?']
+2021-03-19 17:16:06,173 - DEBUG - joeynmt.training - 	Raw hypothesis: ['¿@@', 'como', 'como', 'el', 'hijo', 'de', 'dios', 'de', 'dios', 'de', 'dios', 'de', 'dios']
+2021-03-19 17:16:06,173 - INFO - joeynmt.training - 	Source:     ¿mënaa ja juan tëë tyunkmëëdaty?
+2021-03-19 17:16:06,173 - INFO - joeynmt.training - 	Reference:  ¿cuándo fue autoridad juan?
+2021-03-19 17:16:06,173 - INFO - joeynmt.training - 	Hypothesis: ¿como como el hijo de dios de dios de dios de dios
+2021-03-19 17:16:06,174 - INFO - joeynmt.training - Example #3
+2021-03-19 17:16:06,174 - DEBUG - joeynmt.training - 	Raw source:     ['ix', 'pën', 'jaty', 'në@@', 'myëj@@', 'jaantsy@@', 'pëd@@', 'aa@@', 'kë@@', 'p,', 'ts@@', 'yuuk', 'pëdaꞌa@@', 'g@@', 'anëp', 'jeꞌe', 'a', 'pën', 'në@@', 'tsyu@@', 'uk@@', 'pëd@@', 'aa@@', 'kë@@', 'p,', 'jeꞌejëts', 'mëj', 'jaantsy', 'pëdaꞌa@@', 'g@@', 'anëp']
+2021-03-19 17:16:06,174 - DEBUG - joeynmt.training - 	Raw hypothesis: ['porque', 'yo', 'no', 'es', 'glori@@', 'fic@@', 'ado', 'mi', 'padre', 'y', 'no', 'le', 'ha', 'hecho']
+2021-03-19 17:16:06,174 - INFO - joeynmt.training - 	Source:     ix pën jaty nëmyëjjaantsypëdaakëp, tsyuuk pëdaꞌaganëp jeꞌe a pën nëtsyuukpëdaakëp, jeꞌejëts mëj jaantsy pëdaꞌaganëp
+2021-03-19 17:16:06,174 - INFO - joeynmt.training - 	Reference:  porque cualquiera que se enaltece, será humillado y el que se humilla, será enaltecido
+2021-03-19 17:16:06,174 - INFO - joeynmt.training - 	Hypothesis: porque yo no es glorificado mi padre y no le ha hecho
+2021-03-19 17:16:06,174 - INFO - joeynmt.training - Validation result (greedy) at epoch  66, step     2500: bleu:   2.51, loss: 81262.8594, ppl:  71.8132, duration: 59.1190s
+2021-03-19 17:16:16,849 - INFO - joeynmt.training - Epoch  66: total training loss 91.76
+2021-03-19 17:16:16,849 - INFO - joeynmt.training - EPOCH 67
+2021-03-19 17:17:03,155 - INFO - joeynmt.training - Epoch  67: total training loss 91.49
+2021-03-19 17:17:03,156 - INFO - joeynmt.training - EPOCH 68
+2021-03-19 17:17:51,785 - INFO - joeynmt.training - Epoch  68: total training loss 90.27
+2021-03-19 17:17:51,785 - INFO - joeynmt.training - EPOCH 69
+2021-03-19 17:18:41,770 - INFO - joeynmt.training - Epoch  69: total training loss 88.88
+2021-03-19 17:18:41,770 - INFO - joeynmt.training - EPOCH 70
+2021-03-19 17:19:24,283 - INFO - joeynmt.training - Epoch  70: total training loss 87.47
+2021-03-19 17:19:24,284 - INFO - joeynmt.training - EPOCH 71
+2021-03-19 17:20:15,432 - INFO - joeynmt.training - Epoch  71: total training loss 86.50
+2021-03-19 17:20:15,434 - INFO - joeynmt.training - EPOCH 72
+2021-03-19 17:21:07,068 - INFO - joeynmt.training - Epoch  72: total training loss 85.55
+2021-03-19 17:21:07,069 - INFO - joeynmt.training - EPOCH 73
+2021-03-19 17:21:57,754 - INFO - joeynmt.training - Epoch  73: total training loss 84.66
+2021-03-19 17:21:57,755 - INFO - joeynmt.training - EPOCH 74
+2021-03-19 17:22:45,184 - INFO - joeynmt.training - Epoch  74: total training loss 83.36
+2021-03-19 17:22:45,185 - INFO - joeynmt.training - EPOCH 75
+2021-03-19 17:23:32,567 - INFO - joeynmt.training - Epoch  75: total training loss 82.37
+2021-03-19 17:23:32,568 - INFO - joeynmt.training - EPOCH 76
+2021-03-19 17:24:20,870 - INFO - joeynmt.training - Epoch  76: total training loss 81.39
+2021-03-19 17:24:20,871 - INFO - joeynmt.training - EPOCH 77
+2021-03-19 17:25:02,970 - INFO - joeynmt.training - Epoch  77: total training loss 80.92
+2021-03-19 17:25:02,971 - INFO - joeynmt.training - EPOCH 78
+2021-03-19 17:25:50,948 - INFO - joeynmt.training - Epoch  78: total training loss 79.47
+2021-03-19 17:25:50,949 - INFO - joeynmt.training - EPOCH 79
+2021-03-19 17:26:41,421 - INFO - joeynmt.training - Epoch  79, Step:     3000, Batch Loss:     2.733211, Tokens per Sec:     1599, Lr: 0.000300
+2021-03-19 17:27:38,816 - INFO - joeynmt.training - Example #0
+2021-03-19 17:27:38,817 - DEBUG - joeynmt.training - 	Raw source:     ['yajtu@@', "yo'o@@", 'py', 'je', 'ajxy', 'jeky', 'aambyë']
+2021-03-19 17:27:38,818 - DEBUG - joeynmt.training - 	Raw hypothesis: ['h@@', 'ú@@', 'ú@@', 'e', 'la', 'vac@@', 'aciones']
+2021-03-19 17:27:38,818 - INFO - joeynmt.training - 	Source:     yajtuyo'opy je ajxy jeky aambyë
+2021-03-19 17:27:38,818 - INFO - joeynmt.training - 	Reference:  promover el uso de las lenguas
+2021-03-19 17:27:38,818 - INFO - joeynmt.training - 	Hypothesis: húúe la vacaciones
+2021-03-19 17:27:38,818 - INFO - joeynmt.training - Example #1
+2021-03-19 17:27:38,818 - DEBUG - joeynmt.training - 	Raw source:     ['¿@@', 'neb@@', 'yëk', 'ty@@', 'ij@@', 'yë', 'david', 'ja', 'cristo', 'jeꞌe', 'duꞌun', 'yꞌa@@', 'p@@', 'ꞌaty', 'yꞌo@@', 'k@@', 'ꞌaty,', 'pë', 'david', 'ja', 'cristo', 'jëduꞌun', 'amdsoo', 'yaj@@', 'xë@@', 'ꞌajp', 'mëj', 'windsën@@', '?']
+2021-03-19 17:27:38,818 - DEBUG - joeynmt.training - 	Raw hypothesis: ['¿@@', 'acaso', 'es', 'el', 'que', 'es', 'de', 'ti', 'de', 'la', 'mes@@', 'a,', 'que', 'es', 'el', 'que', 'es', 'necesario', 'que', 'es', 'necesario', 'que', 'la', 'al@@', '?']
+2021-03-19 17:27:38,818 - INFO - joeynmt.training - 	Source:     ¿nebyëk tyijyë david ja cristo jeꞌe duꞌun yꞌapꞌaty yꞌokꞌaty, pë david ja cristo jëduꞌun amdsoo yajxëꞌajp mëj windsën?
+2021-03-19 17:27:38,818 - INFO - joeynmt.training - 	Reference:  pues si david le llama señor, ¿cómo es su hijo?
+2021-03-19 17:27:38,818 - INFO - joeynmt.training - 	Hypothesis: ¿acaso es el que es de ti de la mesa, que es el que es necesario que es necesario que la al?
+2021-03-19 17:27:38,818 - INFO - joeynmt.training - Example #2
+2021-03-19 17:27:38,819 - DEBUG - joeynmt.training - 	Raw source:     ['¿@@', 'mënaa', 'ja', 'juan', 'tëë', 'tyun@@', 'k@@', 'mëëd@@', 'a@@', 'ty@@', '?']
+2021-03-19 17:27:38,819 - DEBUG - joeynmt.training - 	Raw hypothesis: ['¿@@', 'como', 'como', 'la', 'puerta', 'es', 'ju@@', 'an@@', '?']
+2021-03-19 17:27:38,819 - INFO - joeynmt.training - 	Source:     ¿mënaa ja juan tëë tyunkmëëdaty?
+2021-03-19 17:27:38,819 - INFO - joeynmt.training - 	Reference:  ¿cuándo fue autoridad juan?
+2021-03-19 17:27:38,819 - INFO - joeynmt.training - 	Hypothesis: ¿como como la puerta es juan?
+2021-03-19 17:27:38,819 - INFO - joeynmt.training - Example #3
+2021-03-19 17:27:38,819 - DEBUG - joeynmt.training - 	Raw source:     ['ix', 'pën', 'jaty', 'në@@', 'myëj@@', 'jaantsy@@', 'pëd@@', 'aa@@', 'kë@@', 'p,', 'ts@@', 'yuuk', 'pëdaꞌa@@', 'g@@', 'anëp', 'jeꞌe', 'a', 'pën', 'në@@', 'tsyu@@', 'uk@@', 'pëd@@', 'aa@@', 'kë@@', 'p,', 'jeꞌejëts', 'mëj', 'jaantsy', 'pëdaꞌa@@', 'g@@', 'anëp']
+2021-03-19 17:27:38,819 - DEBUG - joeynmt.training - 	Raw hypothesis: ['porque', 'es', 'necesario', 'que', 'no', 'le', 'vier@@', 'as', 'de', 'mi', 'padre', 'que', 'no', 'ha', 'hecho']
+2021-03-19 17:27:38,819 - INFO - joeynmt.training - 	Source:     ix pën jaty nëmyëjjaantsypëdaakëp, tsyuuk pëdaꞌaganëp jeꞌe a pën nëtsyuukpëdaakëp, jeꞌejëts mëj jaantsy pëdaꞌaganëp
+2021-03-19 17:27:38,819 - INFO - joeynmt.training - 	Reference:  porque cualquiera que se enaltece, será humillado y el que se humilla, será enaltecido
+2021-03-19 17:27:38,819 - INFO - joeynmt.training - 	Hypothesis: porque es necesario que no le vieras de mi padre que no ha hecho
+2021-03-19 17:27:38,819 - INFO - joeynmt.training - Validation result (greedy) at epoch  79, step     3000: bleu:   3.07, loss: 82222.3906, ppl:  75.5304, duration: 57.3925s
+2021-03-19 17:27:42,036 - INFO - joeynmt.training - Epoch  79: total training loss 78.42
+2021-03-19 17:27:42,036 - INFO - joeynmt.training - EPOCH 80
+2021-03-19 17:28:33,006 - INFO - joeynmt.training - Epoch  80: total training loss 77.88
+2021-03-19 17:28:33,006 - INFO - joeynmt.training - EPOCH 81
+2021-03-19 17:29:15,095 - INFO - joeynmt.training - Epoch  81: total training loss 76.85
+2021-03-19 17:29:15,096 - INFO - joeynmt.training - EPOCH 82
+2021-03-19 17:30:03,731 - INFO - joeynmt.training - Epoch  82: total training loss 75.80
+2021-03-19 17:30:03,731 - INFO - joeynmt.training - EPOCH 83
+2021-03-19 17:30:53,413 - INFO - joeynmt.training - Epoch  83: total training loss 74.84
+2021-03-19 17:30:53,413 - INFO - joeynmt.training - EPOCH 84
+2021-03-19 17:31:40,746 - INFO - joeynmt.training - Epoch  84: total training loss 73.66
+2021-03-19 17:31:40,746 - INFO - joeynmt.training - EPOCH 85
+2021-03-19 17:32:28,748 - INFO - joeynmt.training - Epoch  85: total training loss 72.95
+2021-03-19 17:32:28,748 - INFO - joeynmt.training - EPOCH 86
+2021-03-19 17:33:16,615 - INFO - joeynmt.training - Epoch  86: total training loss 72.24
+2021-03-19 17:33:16,615 - INFO - joeynmt.training - EPOCH 87
+2021-03-19 17:34:05,046 - INFO - joeynmt.training - Epoch  87: total training loss 71.39
+2021-03-19 17:34:05,046 - INFO - joeynmt.training - EPOCH 88
+2021-03-19 17:34:54,054 - INFO - joeynmt.training - Epoch  88: total training loss 70.51
+2021-03-19 17:34:54,055 - INFO - joeynmt.training - EPOCH 89
+2021-03-19 17:35:37,964 - INFO - joeynmt.training - Epoch  89: total training loss 69.80
+2021-03-19 17:35:37,964 - INFO - joeynmt.training - EPOCH 90
+2021-03-19 17:36:29,283 - INFO - joeynmt.training - Epoch  90: total training loss 69.11
+2021-03-19 17:36:29,284 - INFO - joeynmt.training - EPOCH 91
+2021-03-19 17:37:23,737 - INFO - joeynmt.training - Epoch  91: total training loss 67.97
+2021-03-19 17:37:23,737 - INFO - joeynmt.training - EPOCH 92
+2021-03-19 17:38:09,999 - INFO - joeynmt.training - Epoch  92: total training loss 67.73
+2021-03-19 17:38:09,999 - INFO - joeynmt.training - EPOCH 93
+2021-03-19 17:39:10,809 - INFO - joeynmt.training - Example #0
+2021-03-19 17:39:10,810 - DEBUG - joeynmt.training - 	Raw source:     ['yajtu@@', "yo'o@@", 'py', 'je', 'ajxy', 'jeky', 'aambyë']
+2021-03-19 17:39:10,810 - DEBUG - joeynmt.training - 	Raw hypothesis: ['cont@@', 'in@@', 'ú@@', 'e']
+2021-03-19 17:39:10,810 - INFO - joeynmt.training - 	Source:     yajtuyo'opy je ajxy jeky aambyë
+2021-03-19 17:39:10,810 - INFO - joeynmt.training - 	Reference:  promover el uso de las lenguas
+2021-03-19 17:39:10,810 - INFO - joeynmt.training - 	Hypothesis: continúe
+2021-03-19 17:39:10,810 - INFO - joeynmt.training - Example #1
+2021-03-19 17:39:10,810 - DEBUG - joeynmt.training - 	Raw source:     ['¿@@', 'neb@@', 'yëk', 'ty@@', 'ij@@', 'yë', 'david', 'ja', 'cristo', 'jeꞌe', 'duꞌun', 'yꞌa@@', 'p@@', 'ꞌaty', 'yꞌo@@', 'k@@', 'ꞌaty,', 'pë', 'david', 'ja', 'cristo', 'jëduꞌun', 'amdsoo', 'yaj@@', 'xë@@', 'ꞌajp', 'mëj', 'windsën@@', '?']
+2021-03-19 17:39:10,810 - DEBUG - joeynmt.training - 	Raw hypothesis: ['¿cómo', 'puede', 'que', 'el', 'fuer@@', 'te', 'de', 'la', 'mes@@', 'a,', 'la', 'mes@@', 'a,', 'o', 'de', 'los', 'hombres', 'que', 'es', 'la', 'mes@@', 'a?']
+2021-03-19 17:39:10,811 - INFO - joeynmt.training - 	Source:     ¿nebyëk tyijyë david ja cristo jeꞌe duꞌun yꞌapꞌaty yꞌokꞌaty, pë david ja cristo jëduꞌun amdsoo yajxëꞌajp mëj windsën?
+2021-03-19 17:39:10,811 - INFO - joeynmt.training - 	Reference:  pues si david le llama señor, ¿cómo es su hijo?
+2021-03-19 17:39:10,811 - INFO - joeynmt.training - 	Hypothesis: ¿cómo puede que el fuerte de la mesa, la mesa, o de los hombres que es la mesa?
+2021-03-19 17:39:10,811 - INFO - joeynmt.training - Example #2
+2021-03-19 17:39:10,811 - DEBUG - joeynmt.training - 	Raw source:     ['¿@@', 'mënaa', 'ja', 'juan', 'tëë', 'tyun@@', 'k@@', 'mëëd@@', 'a@@', 'ty@@', '?']
+2021-03-19 17:39:10,811 - DEBUG - joeynmt.training - 	Raw hypothesis: ['¿@@', 'como', 'como', 'la', 'puerta', 'se', 'fue', 'de', 'ju@@', 'an@@', '?']
+2021-03-19 17:39:10,811 - INFO - joeynmt.training - 	Source:     ¿mënaa ja juan tëë tyunkmëëdaty?
+2021-03-19 17:39:10,811 - INFO - joeynmt.training - 	Reference:  ¿cuándo fue autoridad juan?
+2021-03-19 17:39:10,811 - INFO - joeynmt.training - 	Hypothesis: ¿como como la puerta se fue de juan?
+2021-03-19 17:39:10,811 - INFO - joeynmt.training - Example #3
+2021-03-19 17:39:10,811 - DEBUG - joeynmt.training - 	Raw source:     ['ix', 'pën', 'jaty', 'në@@', 'myëj@@', 'jaantsy@@', 'pëd@@', 'aa@@', 'kë@@', 'p,', 'ts@@', 'yuuk', 'pëdaꞌa@@', 'g@@', 'anëp', 'jeꞌe', 'a', 'pën', 'në@@', 'tsyu@@', 'uk@@', 'pëd@@', 'aa@@', 'kë@@', 'p,', 'jeꞌejëts', 'mëj', 'jaantsy', 'pëdaꞌa@@', 'g@@', 'anëp']
+2021-03-19 17:39:10,811 - DEBUG - joeynmt.training - 	Raw hypothesis: ['porque', 'es', 'necesario', 'que', 'él', 'le', 'vier@@', 'as', 'a', 'la', 'mujer']
+2021-03-19 17:39:10,811 - INFO - joeynmt.training - 	Source:     ix pën jaty nëmyëjjaantsypëdaakëp, tsyuuk pëdaꞌaganëp jeꞌe a pën nëtsyuukpëdaakëp, jeꞌejëts mëj jaantsy pëdaꞌaganëp
+2021-03-19 17:39:10,812 - INFO - joeynmt.training - 	Reference:  porque cualquiera que se enaltece, será humillado y el que se humilla, será enaltecido
+2021-03-19 17:39:10,812 - INFO - joeynmt.training - 	Hypothesis: porque es necesario que él le vieras a la mujer
+2021-03-19 17:39:10,812 - INFO - joeynmt.training - Validation result (greedy) at epoch  93, step     3500: bleu:   3.18, loss: 83210.6406, ppl:  79.5601, duration: 55.7918s
+2021-03-19 17:39:55,354 - INFO - joeynmt.training - Epoch  93: total training loss 66.97
+2021-03-19 17:39:55,354 - INFO - joeynmt.training - EPOCH 94
+2021-03-19 17:40:44,106 - INFO - joeynmt.training - Epoch  94: total training loss 66.47
+2021-03-19 17:40:44,106 - INFO - joeynmt.training - EPOCH 95
+2021-03-19 17:41:33,174 - INFO - joeynmt.training - Epoch  95: total training loss 65.41
+2021-03-19 17:41:33,175 - INFO - joeynmt.training - EPOCH 96
+2021-03-19 17:42:21,789 - INFO - joeynmt.training - Epoch  96: total training loss 64.69
+2021-03-19 17:42:21,789 - INFO - joeynmt.training - EPOCH 97
+2021-03-19 17:43:04,819 - INFO - joeynmt.training - Epoch  97: total training loss 64.18
+2021-03-19 17:43:04,819 - INFO - joeynmt.training - EPOCH 98
+2021-03-19 17:43:59,832 - INFO - joeynmt.training - Epoch  98: total training loss 63.51
+2021-03-19 17:43:59,832 - INFO - joeynmt.training - EPOCH 99
+2021-03-19 17:44:53,925 - INFO - joeynmt.training - Epoch  99: total training loss 62.83
+2021-03-19 17:44:53,926 - INFO - joeynmt.training - EPOCH 100
+2021-03-19 17:45:48,345 - INFO - joeynmt.training - Epoch 100: total training loss 62.10
+2021-03-19 17:45:48,345 - INFO - joeynmt.training - Training ended after 100 epochs.
+2021-03-19 17:45:48,345 - INFO - joeynmt.training - Best validation result (greedy) at step     2000:  68.82 ppl.
+2021-03-19 17:45:48,368 - INFO - joeynmt.prediction - Process device: cpu, n_gpu: 0, batch_size per device: 256
+2021-03-19 17:45:48,711 - INFO - joeynmt.prediction - Decoding on dev set (/data/joeynmt/mir.mires/dev.bpe.es)...
+2021-03-19 17:46:43,687 - INFO - joeynmt.prediction -  dev bleu[13a]:   2.13 [Beam search decoding with beam size = 3 and alpha = 1.0]
+2021-03-19 17:46:43,689 - INFO - joeynmt.prediction - Translations saved to: models/alreves2/00002000.hyps.dev
+2021-03-19 17:46:43,690 - INFO - joeynmt.prediction - Decoding on test set (/data/joeynmt/mir.mires/test.bpe.es)...
+2021-03-19 17:48:50,371 - INFO - joeynmt.prediction - test bleu[13a]:   2.23 [Beam search decoding with beam size = 3 and alpha = 1.0]
+2021-03-19 17:48:50,373 - INFO - joeynmt.prediction - Translations saved to: models/alreves2/00002000.hyps.test
